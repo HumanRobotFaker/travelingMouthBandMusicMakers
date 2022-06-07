@@ -1,0 +1,34 @@
+.hidden {
+    display: none;
+}
+
+p {
+    font-size: 24px;
+}
+
+.person-id {
+    width: 400px;
+    border: 2px outset black;
+    border-radius: 12px;
+}
+
+#popup {
+    position: absolute;
+    left: 36%;
+    top: 20%;
+    z-index: 100;
+}
+
+.popup-inducer:hover {
+    color: rgb(222,181,90)
+}
+
+.showing {
+    display: block;
+}
+
+#text-wrapper {
+    width: 60%;
+    margin: auto;
+    padding: 10%;
+}
