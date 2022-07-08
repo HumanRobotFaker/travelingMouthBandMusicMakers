@@ -1,12 +1,17 @@
 const body = document.querySelector("body")
 const popUp = document.querySelector("#popup")
 const popUpInducers = document.querySelectorAll(".popup-inducer")
+const swappingTexts = document.querySelectorAll(".text-swap")
 
 
 body.addEventListener("click", handleBodyClick)
 
 for(let inducer of popUpInducers){
     inducer.addEventListener("click", openPopUp)
+}
+
+for(let text of swappingTexts){
+    text.addEventListener("click", swapText)
 }
 
 
@@ -57,5 +62,28 @@ function hideElement(element) {
     element.classList.add("hidden")
 }
 
+function swapText(event) {
+    const outerSpan = event.currentTarget
+    const textData = textSwapData[outerSpan.id]
+
+    let index = textData.index
+    index = index + 1
+    textData.index = index
+
+    const newText = textData.texts[index % textData.texts.length]
+
+    outerSpan.replaceChildren(newText)
+}
+
+
+
+
 
 //throwaway for example thing
+
+
+
+
+
+
+

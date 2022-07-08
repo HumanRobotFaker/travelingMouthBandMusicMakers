@@ -54,6 +54,7 @@ a:hover {
     left: 20%;
     top: 20%;
     z-index: 100;
+    margin: auto;
 }
 
 .popup-inducer:hover {
