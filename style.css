@@ -6,6 +6,43 @@ p {
     font-size: 24px;
 }
 
+h1 {
+  font-size: 48px;
+}
+
+h2 {
+  font-size: 40px;
+}
+
+h3 {
+  font-size: 33px;
+}
+
+a {
+    color: black;
+  }
+
+  /* mouse over link */
+a:hover {
+    color: gray;
+    background-color: lightgreen;
+      }
+      a:link {
+        text-decoration: none;
+      }
+      
+      a:visited {
+        text-decoration: none;
+      }
+      
+      a:hover {
+        text-decoration: underline;
+      }
+      
+      a:active {
+        text-decoration: underline;
+      }
+
 .person-id {
     width: 400px;
     border: 2px outset black;
@@ -13,8 +50,8 @@ p {
 }
 
 #popup {
-    position: absolute;
-    left: 36%;
+    position: fixed;
+    left: 20%;
     top: 20%;
     z-index: 100;
 }
