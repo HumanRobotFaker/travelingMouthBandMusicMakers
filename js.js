@@ -56,3 +56,6 @@ function hideElement(element) {
     element.classList.remove("showing")
     element.classList.add("hidden")
 }
+
+
+//throwaway for example thing
