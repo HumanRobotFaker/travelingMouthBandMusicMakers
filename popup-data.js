@@ -286,6 +286,19 @@ const popUpData = {
         },
         classNames: ["person-id"]
     },
+    "tvprophet": {
+        tag: "iframe",
+        attributes: {
+            width:"560",
+            height:"315",
+            src:"./mov/TV-Prophet001.mp4",
+            title:"GIF-to-MOV",
+            frameborder:"0",
+            allow:"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture",
+            allowfullscreen:true
+        },
+        classNames: ["person-id"]
+    },
     "dreamdramadetachment": {
         tag: "iframe",
         attributes: {
