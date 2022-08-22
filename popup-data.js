@@ -34,6 +34,14 @@ const popUpData = {
         },
         classNames: ["person-id"]
     },
+    "biological-mass": {
+        tag: "img",
+        attributes: {
+            src: "./images/biologicalmass00.png",
+        },
+        classNames: ["person-id"]
+    },
+
     "britni-id": {
         tag: "img",
         attributes: {
