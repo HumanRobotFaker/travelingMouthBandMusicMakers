@@ -1,0 +1,72 @@
+.hidden {
+    display: none;
+}
+
+p {
+    font-size: 24px;
+}
+
+h1 {
+  font-size: 48px;
+}
+
+h2 {
+  font-size: 40px;
+}
+
+h3 {
+  font-size: 33px;
+}
+
+a {
+    color: black;
+  }
+
+  /* mouse over link */
+a:hover {
+    color: gray;
+    background-color: lightgreen;
+      }
+      a:link {
+        text-decoration: none;
+      }
+      
+      a:visited {
+        text-decoration: none;
+      }
+      
+      a:hover {
+        text-decoration: underline;
+      }
+      
+      a:active {
+        text-decoration: underline;
+      }
+
+.person-id {
+    width: 400px;
+    border: 2px outset black;
+    border-radius: 12px;
+}
+
+#popup {
+    position: fixed;
+    left: 20%;
+    top: 20%;
+    z-index: 100;
+    margin: auto;
+}
+
+.popup-inducer:hover {
+    color: rgb(222,181,90)
+}
+
+.showing {
+    display: block;
+}
+
+#text-wrapper {
+    width: 60%;
+    margin: auto;
+    padding: 10%;
+}
