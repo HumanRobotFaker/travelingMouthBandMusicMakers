@@ -17,17 +17,17 @@ p {
 
 li {
 font-size: 18px;
-color: white;
+color: grey;
 
 }
 ol {
 font-size: 18px;
-color: white;
+color: grey;
 
 }
 h1 {
 font-size: 48px;
-color: white;
+color: grey;
 }
 th, td {
 padding: 15px;
@@ -37,12 +37,12 @@ text-align: left;
 
 h2 {
 font-size: 40px;
-color: white;
+color: grey;
 }
 
 h3 {
 font-size: 30px;
-color: white;
+color: grey;
 }
 
 a {
