@@ -1,11 +1,11 @@
 const textSwapData = {
-    "atp-molecule": {
+    "ahuramazda": {
         type: "sequenced",
         index: 0,
         texts: [
-            "ATP molecules",
-            "ATP compounds",
-            "adenosine triphosphate",
+            "Ahuramazda",
+            "Ahura Mazda",
+            "Ah Ur A Ma Z Da",
         ]
     },
 }
