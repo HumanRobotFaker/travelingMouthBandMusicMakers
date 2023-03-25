@@ -14,7 +14,7 @@ const textSwapData = {
             "Ahura Mazda",
             "Ah Ur A Ma Z Da",
             "A H U R A M A Z D A",
-            createLink('A H U R A__M A Z D A', 007.html)
+            createLink('A H U R A__M A Z D A', '007.html')
         ]
     },
     "ahriman": {
@@ -24,7 +24,7 @@ const textSwapData = {
             "Ahriman",
             "Ahri Man",
             "Ah Ri Ma N",
-            createLink('A H R I M A N', 010.html)
+            createLink('A H R I M A N', '010.html')
         ]
     },
 }
