@@ -1,5 +1,5 @@
 const ahuramazdaLink = document.createElement('a')
-ahuramazdaLink.innerText = 'what you want it to say'
+ahuramazdaLink.innerText = 'A H U R A__M A Z D A'
 ahuramazdaLink.setAttribute('href', '')
 
 
