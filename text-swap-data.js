@@ -1,4 +1,4 @@
-const ahuramazdaLink = document.CreateElement('a')
+const ahuramazdaLink = document.createElement('a')
 ahuramazdaLink.innerText = 'what you want it to say'
 ahuramazdaLink.setAttribute('src', 'the url')
 
