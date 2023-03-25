@@ -1,10 +1,9 @@
-const ahuramazdaLink = document.createElement('a')
-ahuramazdaLink.innerText = 'A H U R A__M A Z D A'
-ahuramazdaLink.setAttribute('href', '003.html')
-
-const ahrimanLink = document.createElement('a')
-ahrimanLink.innerText = 'A H R I M A N'
-ahrimanLink.setAttribute('href', '007.html')
+function createLink (text, url) {
+    const link = document.createElement('a')
+    link.innerText = text
+    link.setAttribute('href', url)
+    return link
+}
 
 const textSwapData = {
     "ahuramazda": {
@@ -15,7 +14,7 @@ const textSwapData = {
             "Ahura Mazda",
             "Ah Ur A Ma Z Da",
             "A H U R A M A Z D A",
-            ahuramazdaLink
+            createLink('A H U R A__M A Z D A', 007.html)
         ]
     },
     "ahriman": {
@@ -25,6 +24,7 @@ const textSwapData = {
             "Ahriman",
             "Ahri Man",
             "Ah Ri Ma N",
+            createLink('A H R I M A N', 010.html)
             ahrimanLink
         ]
     },
