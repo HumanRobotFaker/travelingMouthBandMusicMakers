@@ -6,6 +6,7 @@ const textSwapData = {
             "Ahuramazda",
             "Ahura Mazda",
             "Ah Ur A Ma Z Da",
+            "A H U R A M A Z D A",
         ]
     },
 }
