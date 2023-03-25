@@ -1,6 +1,6 @@
 const ahuramazdaLink = document.createElement('a')
 ahuramazdaLink.innerText = 'what you want it to say'
-ahuramazdaLink.setAttribute('href', 'the url')
+ahuramazdaLink.setAttribute('href', '002.html')
 
 
 const textSwapData = {
