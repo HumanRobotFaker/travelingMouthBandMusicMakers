@@ -12,9 +12,8 @@ const textSwapData = {
             "Ahura Mazda",
             "Ah Ur A Ma Z Da",
             "A H U R A M A Z D A",
+            createPopUpElement(textSwapData['suraj-id']),
             ahuramazdaLink
-            createPopUpElement(textSwapData['suraj-id'])
-            
         ]
     },
 }
