@@ -25,7 +25,6 @@ const textSwapData = {
             "Ahri Man",
             "Ah Ri Ma N",
             createLink('A H R I M A N', 010.html)
-            ahrimanLink
         ]
     },
 }
