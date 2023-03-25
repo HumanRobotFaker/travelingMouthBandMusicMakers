@@ -1,6 +1,6 @@
 const ahuramazdaLink = document.createElement('a')
 ahuramazdaLink.innerText = 'A H U R A__M A Z D A'
-ahuramazdaLink.setAttribute('href', '')
+ahuramazdaLink.setAttribute('href', '003.html')
 
 
 const textSwapData = {
