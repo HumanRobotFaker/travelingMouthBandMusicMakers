@@ -9,7 +9,6 @@
   <p id="text">
     Everything is permanent and extremely important.
   </p>
-
   <button id="start-button">Or is it?</button>
   <script>
 
@@ -31,8 +30,10 @@
     const startButton = document.getElementById('start-button');
     startButton.addEventListener('click', start);
 
-    // Automatically click the button when the page loads
-    startButton.click();
+    // Autoclick the button every 2 seconds
+    setInterval(function() {
+      startButton.click();
+    }, 2000);
     </script>
 </div>
 </body>
