@@ -5,24 +5,12 @@
     <link rel="stylesheet" href="style.css">
 
 <style>
-    .animated-text p {
+.animated-text p {
   opacity: 0;
 }
 
 .animated-text p.is-visible {
-  animation: text-fade-in 1s forwards;
-}
-
-@keyframes text-fade-in {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  opacity: 1;
 }
 
 </style>
@@ -38,6 +26,7 @@
           <script>
             const animatedText = document.querySelector('.animated-text');
 const text = animatedText.querySelector('p');
+const delay = 50; // the delay between each character appearing, in milliseconds
 
 function isInViewport(element) {
   const rect = element.getBoundingClientRect();
@@ -51,7 +40,16 @@ function isInViewport(element) {
 
 function animateText() {
   if (isInViewport(animatedText)) {
-    text.classList.add('is-visible');
+    const characters = text.textContent.split('');
+    text.textContent = '';
+    characters.forEach((char, index) => {
+      setTimeout(() => {
+        text.textContent += char;
+        if (index === characters.length - 1) {
+          text.classList.add('is-visible');
+        }
+      }, delay * index);
+    });
     document.removeEventListener('scroll', animateText);
   }
 }
