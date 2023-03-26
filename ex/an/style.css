@@ -124,4 +124,20 @@ color: white;
 }
 
 
+.popup {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.definition:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
 
