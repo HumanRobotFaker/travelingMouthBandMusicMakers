@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <title>
-Letter _ Holly
+Le Holly
 
 </title>
 <head>
@@ -37,8 +37,7 @@ Letter _ Holly
     </main>
 </body>
 <script> 
-const text = "Holly!!!!!!!";
-
+       const text = "Holly!!!!!!!";
 let index = 0;
 const textContainer = document.querySelector("#text");
 
@@ -46,9 +45,11 @@ function writeText() {
   textContainer.innerHTML = text.slice(0, index);
   index++;
   if (index > text.length) {
-    index = 0;
+    // stop the animation at the last frame
+    index = text.length;
+  } else {
+    setTimeout(writeText, 100);
   }
-  setTimeout(writeText, 100);
 }
 
 writeText();
