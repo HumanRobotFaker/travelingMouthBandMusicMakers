@@ -63,6 +63,22 @@
         
               document.addEventListener('scroll', animateText);
               animateText();
+
+function debounce(func, delay) {
+  let timer;
+  return function(...args) {
+    clearTimeout(timer);
+    timer = setTimeout(() => {
+      func.apply(this, args);
+    }, delay);
+  }
+}
+
+const debouncedAnimateText = debounce(animateText, 100);
+
+document.addEventListener('scroll', debouncedAnimateText);
+
+
             </script>
           </body>
         </html>
