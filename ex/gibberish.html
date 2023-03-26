@@ -28,6 +28,11 @@
       text.innerText = gibberishText;
     }
     
+    const startButton = document.getElementById('start-button');
+    startButton.addEventListener('click', start);
+
+    // Automatically click the button when the page loads
+    startButton.click();
     </script>
 </div>
 </body>
