@@ -1,0 +1,66 @@
+<html>
+    <title>letter to Marissa</title>
+
+<head>
+    <link rel="stylesheet" href="style.css">
+
+<style>
+    .animated-text p {
+  opacity: 0;
+}
+
+.animated-text p.is-visible {
+  animation: text-fade-in 1s forwards;
+}
+
+@keyframes text-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+</style>
+</head>
+
+<body>
+    <div id="text-wrapper">
+
+        <div class="animated-text">
+            <p>Here is some text that will be animated.</p>
+          </div>
+
+          <script>
+            const animatedText = document.querySelector('.animated-text');
+const text = animatedText.querySelector('p');
+
+function isInViewport(element) {
+  const rect = element.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.left >= 0 &&
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+  );
+}
+
+function animateText() {
+  if (isInViewport(animatedText)) {
+    text.classList.add('is-visible');
+    document.removeEventListener('scroll', animateText);
+  }
+}
+
+document.addEventListener('scroll', animateText);
+animateText();
+
+          </script>
+
+
+</body>
+</html>
