@@ -1,0 +1,42 @@
+<html>
+    <title>woke</title>
+    <style>    #text {
+        font-size: 48px;
+      }</style>
+<head>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="text-wrapper">
+  <p id="text">
+    Everything is permanent and extremely important.
+  </p>
+  <button id="start-button"><h2>Or is it?</h2></button>
+  <script>
+
+function start() {
+  let gibberishText = '';
+
+  for (let i = 0; i < originalText.length; i++) {
+    const randomIndex = Math.floor(Math.random() * characters.length);
+    gibberishText += characters[randomIndex];
+  }
+
+  const intervalId = setInterval(() => {
+    const randomIndex = Math.floor(Math.random() * characters.length);
+    const newChar = characters[randomIndex];
+    gibberishText = gibberishText.slice(0, -1) + newChar;
+    text.innerText = gibberishText;
+    if (gibberishText === originalText) {
+      clearInterval(intervalId);
+    }
+  }, 50);
+}
+
+    </script>
+
+
+</div>
+</body>
+</html>
