@@ -11,6 +11,7 @@
 
 .animated-text p.is-visible {
   opacity: 1;
+  transition: opacity 2s ease-in-out; /* the duration and easing of the transition */
 }
 
 </style>
@@ -20,13 +21,13 @@
     <div id="text-wrapper">
 
         <div class="animated-text">
-            <p>Is this really going to work? Am I going to see the letter be written as it arrives?</p>
+            <p>Is this really going to work? Am I going to see the letter be written as it</p>
           </div>
 
           <script>
+
 const animatedText = document.querySelector('.animated-text');
 const text = animatedText.querySelector('p');
-const delay = 200; // the delay between each character appearing, in milliseconds
 
 function isInViewport(element) {
   const rect = element.getBoundingClientRect();
@@ -40,22 +41,14 @@ function isInViewport(element) {
 
 function animateText() {
   if (isInViewport(animatedText)) {
-    const characters = text.textContent.split('');
-    text.textContent = '';
-    characters.forEach((char, index) => {
-      setTimeout(() => {
-        text.textContent += char;
-        if (index === characters.length - 1) {
-          text.classList.add('is-visible');
-        }
-      }, delay * index);
-    });
+    text.classList.add('is-visible');
     document.removeEventListener('scroll', animateText);
   }
 }
 
 document.addEventListener('scroll', animateText);
 animateText();
+
 
 
           </script>
