@@ -6,7 +6,7 @@
     <script src="https://d3js.org/d3.v7.min.js"></script>
   </head>
   <body>
-    <h1>Daphne Temperature Highs 2023</h1>
+    <h1>Daphne Temperature Highs 2023-fake</h1>
     <div id="chart"></div>
     <script>
       // Data for the temperature highs in Daphne, Alabama for 2023
@@ -65,6 +65,24 @@
          .attr("cx", function(d) { return xScale(d.month) + xScale.bandwidth() / 2; })
          .attr("cy", function(d) { return yScale(d.temp); })
          .attr("r", 5);
+
+         // Add x axis label
+svg.append("text")
+   .attr("class", "axis-label")
+   .attr("x", width / 2)
+   .attr("y", height + margin.bottom - 10)
+   .style("text-anchor", "middle")
+   .text("Month");
+
+// Add y axis label
+svg.append("text")
+   .attr("class", "axis-label")
+   .attr("x", -height / 2)
+   .attr("y", -margin.left + 20)
+   .attr("transform", "rotate(-90)")
+   .style("text-anchor", "middle")
+   .text("Temperature (°C)");
+
     </script>
   </body>
 </html>
