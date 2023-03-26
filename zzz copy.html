@@ -23,20 +23,23 @@
         </p>
     </main>
     <script> 
-        const text = "Holly!!!!!!!";
-        let index = 0;
-        const textContainer = document.querySelector("#text");
+       const text = "Holly!!!!!!!";
+let index = 0;
+const textContainer = document.querySelector("#text");
 
-        function writeText() {
-            textContainer.innerHTML = text.slice(0, index);
-            index++;
-            if (index > text.length) {
-                index = 0;
-            }
-            setTimeout(writeText, 100);
-        }
+function writeText() {
+  textContainer.innerHTML = text.slice(0, index);
+  index++;
+  if (index > text.length) {
+    // stop the animation at the last frame
+    index = text.length;
+  } else {
+    setTimeout(writeText, 100);
+  }
+}
 
-        writeText();
+writeText();
+
     </script>
     <script src="popup-data.js"></script>
     <script src="js.js"></script> 
