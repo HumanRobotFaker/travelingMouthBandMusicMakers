@@ -4,7 +4,7 @@ var myChart = new Chart(ctx, {
     data: {
         labels: ["Humans", "Robots", "Cyborg Penguins", "Wingless Midge", "Cyborg Seals", "Giant Squid"],
         datasets: [{
-            label: 'Population (thousands)',
+            label: 'Post-KingLeroyInstallation™ Antarctic Population (thousands)',
             data: [6, 12, 13, 150, 2, 13],
             backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
