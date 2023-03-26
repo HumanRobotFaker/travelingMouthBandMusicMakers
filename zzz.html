@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<title>
+According to Mars
+
+</title>
+<head>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        #text {
+  border-right: 0.15em solid black;
+  font-size: 2em;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typing 4s steps(20, end);
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+    </style>
+</head>
+
+<body>
+    <main>
+        <div id="text-wrapper">
+         
+           <center><h1>   yah    </h1></center>
+            
+           <p> &nbsp&nbsp&nbsp&nbsp 
+   
+            <div id="text-container">
+                <p id="text"></p>
+              </div>
+              
+   
+
+        <h2><center><a href="011.html"> ----------> { continue } <--------- </a> </center></h2>
+        <BR><BR>
+  
+            <CENTER><img src = "images/ad-toilet.png" width="90%" height="90%"></CENTER>
+
+            <h2><center><a href="lost.html"> .........¿⊥SO˥ noʎ ǝɹ∀......... </a> </center></h2> </div>
+
+            <div id="popup" class="hidden"></div>
+    </main>
+</body>
+<script> 
+const text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed feugiat, nulla ut bibendum tempor, nunc sapien dictum nisi, eu bibendum nisl purus sit amet felis. Proin lacinia placerat ligula, eget imperdiet eros. Integer suscipit, est vel aliquam efficitur, ex nunc hendrerit nunc, eu aliquam libero sem ac magna.";
+
+let index = 0;
+const textContainer = document.querySelector("#text");
+
+function writeText() {
+  textContainer.innerHTML = text.slice(0, index);
+  index++;
+  if (index > text.length) {
+    index = 0;
+  }
+  setTimeout(writeText, 100);
+}
+
+writeText();
+
+</script>
+<script src="popup-data.js"></script>
+<script src="js.js"></script> 
+</html> 
