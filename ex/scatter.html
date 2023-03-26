@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Temperature Highs in Daphne, Alabama for 2023</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+<body>
+    <h1>Temperature Highs in Daphne, Alabama for 2023</h1>
+    <div id="chart"></div>
+    <script>
+        // Data
+        var data = [
+            { date: "2023-01-01", temp: 15 },
+            { date: "2023-02-01", temp: 17 },
+            { date: "2023-03-01", temp: 20 },
+            { date: "2023-04-01", temp: 25 },
+            { date: "2023-05-01", temp: 28 },
+            { date: "2023-06-01", temp: 30 },
+            { date: "2023-07-01", temp: 32 },
+            { date: "2023-08-01", temp: 33 },
+            { date: "2023-09-01", temp: 30 },
+            { date: "2023-10-01", temp: 26 },
+            { date: "2023-11-01", temp: 20 },
+            { date: "2023-12-01", temp: 16 },
+        ];
+
+        // Set the dimensions and margins of the chart
+        var margin = { top: 20, right: 30, bottom: 30, left: 40 },
+            width = 600 - margin.left - margin.right,
+            height = 400 - margin.top - margin.bottom;
+
+        // Append the SVG object to the chart div
+        var svg = d3.select("#chart")
+            .append("svg")
+            .attr("width", width + margin.left + margin.right)
+            .attr("height", height + margin.top + margin.bottom)
+            .append("g")
+            .attr("transform",
+                "translate(" + margin.left + "," + margin.top + ")");
+
+        // Add X axis
+        var x = d3.scaleTime()
+            .domain([new Date("2023-01-01"), new Date("2023-12-01")])
+            .range([0, width]);
+        svg.append("g")
+            .attr("transform", "translate(0," + height + ")")
+            .call(d3.axisBottom(x));
+
+        // Add Y axis
+        var y = d3.scaleLinear()
+            .domain([0, d3.max(data, function (d) { return +d.temp; })])
+            .range([height, 0]);
+        svg.append("g")
+            .call(d3.axisLeft(y));
+
+        // Add dots
+        svg.append('g')
+            .selectAll("dot")
+            .data(data)
+            .enter()
+            .append("circle")
+            .attr("cx", function (d) { return x(new Date(d.date)); })
+            .attr("cy", function (d) { return y(d.temp); })
+            .attr("r", 5)
+            .style("fill", "steel
