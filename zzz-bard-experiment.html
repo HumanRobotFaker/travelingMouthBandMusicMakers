@@ -17,12 +17,11 @@ According to Mars
   <h1>chaotic transience</h1>
   <p id="text">The Kingdom of Antarctica has been established as the result of collective efforts amongst neoliberal democracies, which have grown tired of the listless unproductivity by the penguin plebian lumpenproletariat. Therefore, a monarch was installed who had a temperament toward economic efficiency, forced cybernetic implantation upon the penguin population for the purposes of enabling electromagnetic communications featuring symbolic language and audiovisual hallucination betwixt individual penguin citizens. </p>
   <script>
-    var text = "The Kingdom of Antarctica has been established as the result of collective efforts amongst neoliberal democracies, which have grown tired of the listless unproductivity by the penguin plebian lumpenproletariat. Therefore, a monarch was installed who had a temperament toward economic efficiency, forced cybernetic implantation upon the penguin population for the purposes of enabling electromagnetic communications featuring symbolic language and audiovisual hallucination betwixt individual penguin citizens.";
-    var colors = ["dream", "dictatorship", "liberation", "revolution", "hypercapitalism", "cybernetic", "war", "slavery", "ecological destruction", "lucid", "inflation", "depression", "extinction"];
-
-    document.getElementById("text").style.transitionDuration = "10s";
+       document.getElementById("text").style.transitionDuration = "10s";
     document.getElementById("text").style.transitionTimingFunction = "ease-in-out";
 
+    var text = "The Kingdom of Antarctica has been established as the result of collective efforts amongst neoliberal democracies, which have grown tired of the listless unproductivity by the penguin plebian lumpenproletariat. Therefore, a monarch was installed who had a temperament toward economic efficiency, forced cybernetic implantation upon the penguin population for the purposes of enabling electromagnetic communications featuring symbolic language and audiovisual hallucination betwixt individual penguin citizens.";
+    var colors = ["dream", "dictatorship", "liberation", "revolution", "hypercapitalism", "cybernetic", "war", "slavery", "ecological destruction", "lucid", "inflation", "depression", "extinction"];
 
     setInterval(function() {
       var newText = text.slice(0, Math.floor(Math.random() * text.length));
@@ -30,6 +29,8 @@ According to Mars
       newText += colors[Math.floor(Math.random() * colors.length)];
       document.getElementById("text").innerHTML = newText;
     }, 1000);
+
+    
   </script>
 
 <h2><center><a href="011.html"> ----------> { continue } <--------- </a> </center></h2>
