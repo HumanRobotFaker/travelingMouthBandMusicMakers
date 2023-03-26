@@ -11,7 +11,7 @@ Letter 2 Mars
 
 #text {
   border-right: 0.15em solid black;
-  font-size: 2em;
+  font-size: 1em;
   white-space: pre-wrap;
   overflow: hidden;
   animation: typing 4s steps(20, end) ;
@@ -48,7 +48,7 @@ function writeText() {
     // stop the animation at the last frame
     index = text.length;
   } else {
-    setTimeout(writeText, 10);
+    setTimeout(writeText, 30);
   }
 }
 
