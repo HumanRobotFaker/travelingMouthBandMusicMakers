@@ -123,3 +123,24 @@ background-color: #04AA6D;
 color: white;
 }
 
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.artwork {
+  margin: 20px;
+  text-align: center;
+}
+
+.artwork pre {
+  font-size: 36px;
+  line-height: 1;
+  margin: 0;
+}
+
+.artwork .caption {
+  font-size: 18px;
+  margin-top: 10px;
+}
