@@ -24,9 +24,9 @@
           </div>
 
           <script>
-            const animatedText = document.querySelector('.animated-text');
+const animatedText = document.querySelector('.animated-text');
 const text = animatedText.querySelector('p');
-const delay = 50; // the delay between each character appearing, in milliseconds
+const delay = 200; // the delay between each character appearing, in milliseconds
 
 function isInViewport(element) {
   const rect = element.getBoundingClientRect();
@@ -56,6 +56,7 @@ function animateText() {
 
 document.addEventListener('scroll', animateText);
 animateText();
+
 
           </script>
 
