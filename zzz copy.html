@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Letter _ Holly</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        #text {
+            border-right: 0.15em solid black;
+            font-size: 2em;
+            white-space: pre-wrap;
+            overflow: hidden;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;
+            <div id="text-container">
+                <p id="text"></p>
+            </div>
+            <div id="popup" class="hidden"></div>
+        </p>
+    </main>
+    <script> 
+        const text = "Holly!!!!!!!";
+        let index = 0;
+        const textContainer = document.querySelector("#text");
+
+        function writeText() {
+            textContainer.innerHTML = text.slice(0, index);
+            index++;
+            if (index > text.length) {
+                index = 0;
+            }
+            setTimeout(writeText, 100);
+        }
+
+        writeText();
+    </script>
+    <script src="popup-data.js"></script>
+    <script src="js.js"></script> 
+</body>
+</html>
