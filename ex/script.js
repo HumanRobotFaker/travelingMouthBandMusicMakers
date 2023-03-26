@@ -2,10 +2,10 @@ var ctx = document.getElementById("myChart").getContext('2d');
 var myChart = new Chart(ctx, {
     type: 'bar',
     data: {
-        labels: ["Humans", "Robots", "Cyborg Penguins", "Wingless Midge", "Cyborg Seals", "Giant Squid"],
+        labels: ["Humans", "Robots", "Cyborg Penguins", "Natural Penguins", "Cyborg Seals", "Giant Squid"],
         datasets: [{
             label: 'Antarctic Population (thousands)',
-            data: [6, 12, 13, 150, 2, 13],
+            data: [6, 12, 13, 19, 2, 13],
             backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
                 'rgba(54, 162, 235, 0.2)',
