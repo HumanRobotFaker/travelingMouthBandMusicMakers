@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Random Text</title>
+</head>
+<body>
+  <h1>Random Text</h1>
+  <p>This is a paragraph whose text randomly changes.</p>
+  <script>
+    var text = "This is a paragraph whose text randomly changes.";
+    var colors = ["red", "green", "blue", "yellow"];
+
+    setInterval(function() {
+      var newText = text.slice(0, Math.floor(Math.random() * text.length));
+      newText += " ";
+      newText += colors[Math.floor(Math.random() * colors.length)];
+      document.getElementById("text").innerHTML = newText;
+    }, 1000);
+  </script>
+</body>
+</html>
