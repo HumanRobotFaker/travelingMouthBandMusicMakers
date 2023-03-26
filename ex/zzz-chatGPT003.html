@@ -1,69 +1,57 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="UTF-8">
-	<title>Random Numbers Wall</title>
-	<style>
-		body {
-			margin: 0;
-			padding: 0;
-			background-color: #111;
-			color: #fff;
-			font-family: Arial, sans-serif;
-		}
-		.container {
-			display: flex;
-			flex-wrap: wrap;
-			align-items: center;
-			justify-content: center;
-			height: 100vh;
-			width: 100%;
-			overflow: hidden;
-		}
-		.block {
-			margin: 0.5em;
-			min-width: 2em;
-			height: 2em;
-			background-color: #333;
-			border-radius: 0.5em;
-			box-shadow: 0 0.2em 0.5em rgba(0,0,0,0.5);
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			font-weight: bold;
-			font-size: 2em;
-			line-height: 1.2;
-			letter-spacing: 0.05em;
-			animation: change 1s linear infinite;
-		}
-		@keyframes change {
-			from { transform: scale(1); }
-			50% { transform: scale(1.2); }
-			to { transform: scale(1); }
-		}
-	</style>
+  <title>Number Crunching Animation</title>
+  <style>
+    /* Center the animation */
+    #animation-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #222;
+    }
+
+    /* Set the size of the animation */
+    #animation {
+      width: 400px;
+      height: 400px;
+      position: relative;
+    }
+
+    /* Create the numbers */
+    .number {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      font-size: 48px;
+      font-weight: bold;
+      color: #fff;
+      transform-origin: 50% 50%;
+      animation: number-animation 2s linear infinite;
+    }
+
+    /* Animation for the numbers */
+    @keyframes number-animation {
+      0% { transform: translate(-50%, -50%) rotate(0deg); opacity: 1; }
+      50% { transform: translate(-50%, -50%) rotate(180deg); opacity: 0.5; }
+      100% { transform: translate(-50%, -50%) rotate(360deg); opacity: 1; }
+    }
+  </style>
 </head>
 <body>
-	<div class="container">
-		<script>
-			// Generate random numbers and display them in the blocks
-			const container = document.querySelector('.container');
-			const totalBlocks = 52; // Change this number to adjust the total number of blocks
-			for (let i = 0; i < totalBlocks; i++) {
-				const block = document.createElement('div');
-				block.className = 'block';
-				block.textContent = Math.floor(Math.random() * 10000); // Change this number to adjust the range of the random numbers
-				container.appendChild(block);
-			}
-
-			// Update the numbers in the blocks every second
-			setInterval(() => {
-				const blocks = document.querySelectorAll('.block');
-				blocks.forEach(block => {
-					block.textContent = Math.floor(Math.random() * 10000); // Change this number to adjust the range of the random numbers
-				});
-			}, 1000);
-		</script>
-	</div>
+  <div id="animation-container">
+    <div id="animation">
+      <div class="number">1</div>
+      <div class="number">2</div>
+      <<div class="number">3</div>
+      <div class="number">4</div>
+      <div class="number">5</div>
+      <div class="number">6</div>
+      <div class="number">7</div>
+      <div class="number">8</div>
+      <div class="number">9</div>
+    </div>
+  </div>
 </body>
 </html>
