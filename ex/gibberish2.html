@@ -33,7 +33,13 @@ function start() {
     }
   }, 50);
 }
+const startButton = document.getElementById('start-button');
+    startButton.addEventListener('click', start);
 
+    // Autoclick the button every 2 seconds
+    setInterval(function() {
+      startButton.click();
+    }, 2000);
     </script>
 
 
