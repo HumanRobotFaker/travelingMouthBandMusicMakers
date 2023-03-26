@@ -5,7 +5,7 @@ var myChart = new Chart(ctx, {
         labels: ["Humans", "Robots", "Cyborg Penguins", "Wingless Midge", "Cyborg Seals", "Giant Squid"],
         datasets: [{
             label: 'Population (thousands)',
-            data: [6, 12, 13, 15, 200, 13],
+            data: [6, 12, 13, 150, 2, 13],
             backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
                 'rgba(54, 162, 235, 0.2)',
