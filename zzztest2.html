@@ -15,7 +15,8 @@
 			{ text: "こんにちは", color: "green", size: "18px" }
 		]; // List of texts, colors, and font sizes
 		
-		var interval = 2000; // Initial delay between auto-clicks in milliseconds
+		var interval = <?php echo getAutoClickInterval(); ?>; // Get auto-click interval from server-side code
+		
 		var autoClickTimer = null; // Timer for auto-click feature
 		
 		function changeText() {
@@ -59,11 +60,6 @@
 			// Add button event listeners for auto-click feature
 			document.getElementById("startButton").addEventListener("click", startAutoClick);
 			document.getElementById("stopButton").addEventListener("click", stopAutoClick);
-			document.getElementById("intervalInput").addEventListener("change", function() {
-				interval = parseInt(this.value);
-				stopAutoClick();
-				startAutoClick();
-			});
 		};
 	</script>
 </head>
@@ -74,8 +70,7 @@
 	<p class="text">こんにちは</p>
 	
 	<!-- Controls for auto-click feature -->
-	<label for="intervalInput">Interval:</label>
-	<input id="intervalInput" type="number" value="2000" min="100" max="10000" step="100">
+	<input id="intervalInput" type="hidden" value="<?php echo getAutoClickInterval(); ?>">
 	<button id="startButton">Start</button>
 	<button id="stopButton">Stop</button>
 </body>
