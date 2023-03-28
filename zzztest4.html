@@ -27,10 +27,28 @@ According to Mars
 
     
     <script>
+      
       setTimeout(function() {
         var message = document.getElementById("message");
         message.innerHTML = message.innerHTML.replace("Hello", "Goodbye");
       }, 20000); // 20,000 milliseconds = 20 seconds
+
+      setTimeout(function() {
+        var message = document.getElementById("message");
+        message.innerHTML = message.innerHTML.replace("incredible", "unbelievable");
+      }, 15000); // 20,000 milliseconds = 15 seconds
+
+      setTimeout(function() {
+        var message = document.getElementById("message");
+        message.innerHTML = message.innerHTML.replace("extraterrestials", "aliens");
+      }, 10000); // 20,000 milliseconds = 10 seconds
+
+      setTimeout(function() {
+        var message = document.getElementById("message");
+        message.innerHTML = message.innerHTML.replace("planet", "hunk of rock");
+      }, 5000); // 20,000 milliseconds = 5 seconds
+
+
     </script>
   </body>
   <script src="popup-data.js"></script>
