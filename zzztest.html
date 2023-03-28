@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Click to Change Text</title>
+	<style>
+		.text {
+			cursor: pointer; /* Change cursor to pointer on hover */
+		}
+	</style>
+	<script>
+		var texts = ["Hello", "Hola", "Bonjour", "こんにちは"]; // List of texts
+		
+		function changeText() {
+			var currentText = this.innerHTML; // Get current text
+			var index = texts.indexOf(currentText); // Find index of current text in list
+			
+			// Change text to next text in list
+			if (index < texts.length - 1) {
+				this.innerHTML = texts[index + 1];
+			} else {
+				this.innerHTML = texts[0];
+			}
+		}
+		
+		window.onload = function() {
+			var textElements = document.getElementsByClassName("text"); // Get all elements with class "text"
+			
+			// Add click event listener to each text element
+			for (var i = 0; i < textElements.length; i++) {
+				textElements[i].addEventListener("click", changeText);
+			}
+		};
+	</script>
+</head>
+<body>
+	<p class="text">Hello</p>
+	<p class="text">Hola</p>
+	<p class="text">Bonjour</p>
+	<p class="text">こんにちは</p>
+</body>
+</html>
