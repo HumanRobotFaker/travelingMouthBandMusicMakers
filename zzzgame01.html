@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Text-based Game Example</title>
+  </head>
+  <body>
+    <p id="output"></p>
+    <p>Points: <span id="points">0</span></p>
+    <button onclick="startGame()">Start Game</button>
+    <script>
+      var output = document.getElementById("output");
+      var points = 0;
+      
+      function startGame() {
+        output.innerHTML = "You are standing at the entrance to a dark cave. What do you do?";
+        document.getElementsByTagName("button")[0].style.display = "none";
+        addOption("Enter the cave", "caveEntrance");
+        addOption("Run away", "endGame");
+      }
+      
+      function addOption(text, nextScene) {
+        var button = document.createElement("button");
+        button.innerHTML = text;
+        button.onclick = function() { changeScene(nextScene); };
+        document.body.appendChild(button);
+      }
+      
+      function changeScene(nextScene) {
+        switch (nextScene) {
+          case "caveEntrance":
+            points += 5;
+            output.innerHTML = "You enter the cave and find a treasure chest. What do you do?";
+            addOption("Open the chest", "treasure");
+            addOption("Leave the chest and continue exploring", "continueExploring");
+            break;
+          case "treasure":
+            points += 10;
+            output.innerHTML = "You open the chest and find a magic sword. What do you do?";
+            addOption("Take the sword and leave the cave", "endGame");
+            addOption("Leave the sword and continue exploring", "continueExploring");
+            break;
+          case "continueExploring":
+            output.innerHTML = "You continue exploring the cave. What do you do?";
+            addOption("Go deeper into the cave", "deepCave");
+            addOption("Leave the cave", "endGame");
+            break;
+          case "deepCave":
+            points += 15;
+            output.innerHTML = "You find a dragon guarding a pile of gold. What do you do?";
+            addOption("Fight the dragon", "fightDragon");
+            addOption("Leave the gold and run away", "endGame");
+            break;
+          case "fightDragon":
+            points += 20;
+            output.innerHTML = "You defeat the dragon and claim the gold as your own. Congratulations, you win!";
+            document.getElementsByTagName("button")[0].style.display = "none";
+            document.getElementById("points").innerHTML = points;
+            break;
+          case "endGame":
+            output.innerHTML = "You lose. Game over.";
+            document.getElementsByTagName("button")[0].style.display = "none";
+            document.getElementById("points").innerHTML = points;
+            break;
+        }
+      }
+    </script>
+  </body>
+</html>
