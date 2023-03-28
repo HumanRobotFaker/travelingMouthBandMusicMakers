@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Multiple Word Change Example</title>
+  </head>
+  <body>
+    <p id="message">Hello, world! This is a test.</p>
+    <script>
+      setTimeout(function() {
+        var message = document.getElementById("message");
+        message.innerHTML = message.innerHTML.replace("Hello", "Goodbye");
+      }, 5000); // 5 seconds
+      
+      setTimeout(function() {
+        var message = document.getElementById("message");
+        message.innerHTML = message.innerHTML.replace("world", "universe");
+      }, 10000); // 10 seconds
+      
+      setTimeout(function() {
+        var message = document.getElementById("message");
+        message.innerHTML = message.innerHTML.replace("test", "example");
+      }, 15000); // 15 seconds
+    </script>
+  </body>
+</html>
