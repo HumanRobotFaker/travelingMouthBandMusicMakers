@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Pop-up Vocabulary Definitions</title>
+	<style>
+		.popup {
+			position: absolute;
+			background-color: white;
+			border: 1px solid black;
+			padding: 10px;
+			font-size: 14px;
+			box-shadow: 3px 3px 3px grey;
+			z-index: 1;
+			visibility: hidden;
+		}
+
+		.text {
+			cursor: pointer;
+			display: inline;
+			position: relative;
+		}
+	</style>
+	<script>
+		function showPopup(text, event) {
+			var popup = document.getElementById("popup");
+			popup.innerHTML = text;
+			popup.style.visibility = "visible";
+			popup.style.left = event.pageX + "px";
+			popup.style.top = event.pageY + "px";
+		}
+
+		function hidePopup() {
+			var popup = document.getElementById("popup");
+			popup.style.visibility = "hidden";
+		}
+
+		window.onload = function() {
+			var terms = [
+				{ term: "Photosynthesis", definition: "The process by which green plants and some other organisms use sunlight to synthesize foods with the help of chlorophyll." },
+				{ term: "Mitosis", definition: "The process by which a cell divides its nucleus and contents to produce two new cells, each with the same amount of DNA as the original cell." },
+				{ term: "Magnetic field", definition: "The area around a magnet where magnetic force can be detected." }
+			]; // List of vocabulary terms and definitions
+
+			var textElements = document.getElementsByClassName("text");
+			for (var i = 0; i < textElements.length; i++) {
+				var term = textElements[i].getAttribute("data-term");
+				var definition = terms.find(t => t.term === term).definition;
+
+				textElements[i].addEventListener("mouseover", function(event) {
+					showPopup(definition, event);
+				});
+
+				textElements[i].addEventListener("mouseout", function(event) {
+					hidePopup();
+				});
+			}
+		};
+	</script>
+</head>
+<body>
+	<p>Photosynthesis is <span class="text" data-term="Photosynthesis">the process by which green plants and some other organisms use sunlight to synthesize foods with the help of chlorophyll</span>. It is an essential part of the carbon cycle and is one of the most important biochemical pathways. </p>
+	<p>Mitosis is <span class="text" data-term="Mitosis">the process by which a cell divides its nucleus and contents to produce two new cells, each with the same amount of DNA as the original cell</span>. It is a type of cell division that occurs in somatic cells and is essential for growth and repair of tissues.</p>
+	<p>A magnetic field is <span class="text" data-term="Magnetic field">the area around a magnet where magnetic force can be detected</span>. It is a vector field that describes the magnetic influence of electric currents and magnetized materials.</p>
+
+	<div id="popup" class="popup"></div>
+</body>
+</html>
