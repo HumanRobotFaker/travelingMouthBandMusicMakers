@@ -23,7 +23,7 @@
     <p id="dialogue"></p>
     <button onclick="talk()">Talk to Mars</button>
     <div id="kissImageContainer">
-      <img id="kissImage" src="images/AntarcticFlagWaving.gif" alt="Kiss Image">
+      <img id="kissImage" src="images/kiss.gif" alt="Kiss Image">
       <button id="dateButton" onclick="goOnDate()">Go on a Date</button>
     </div>
   </div>
@@ -52,7 +52,7 @@
       document.getElementById("lovePoints").innerHTML = lovePoints;
       if (lovePoints >= 5 && dialogueIndex >= dialogue.length) {
         var kissButton = document.createElement("button");
-        kissButton.innerHTML = "Kiss her";
+        kissButton.innerHTML = "Kiss Mars";
         kissButton.onclick = function() {
           document.getElementById("kissImage").style.display = "block";
           document.getElementById("dateButton").style.display = "block";
