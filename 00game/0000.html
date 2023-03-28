@@ -4,15 +4,17 @@
 <head>
   <meta charset="UTF-8">
   <link rel="stylesheet" href="style.css">
-  <title>uRiAh's pHaNtAsY</title>
+  <title>uriah's phantasy</title>
 
   <style>
     #kissImage {
       display: none;
     }
+
     #dateButton {
       display: none;
     }
+
     #dateLink {
       display: none;
     }
@@ -22,14 +24,14 @@
 <body>
   <div id="text-wrapper">
     <h1>uRiAh'S dReam</h1>
-    
+
     <p id="dialogue"></p>
     <button onclick="talk()">chattin' w/ Mars</button>
     <div id="kissImageContainer">
       <img id="kissImage" src="images/kiss.gif" alt="Kiss Image">
       <button id="dateButton" onclick="goOnDate()">Go on a Date</button>
-      <a id="dateLink" href="0756.html">(what next?)</a>
     </div>
+    <a id="dateLink" href="dayton.html">Go to Dayton</a>
   </div>
 
   <script>
@@ -43,7 +45,6 @@
       "I really, really, really like being around you.",
       "Do you consent to my pressing my lips against your lips?"
     ];
-    var dateStarted = false;
 
     function talk() {
       if (dialogueIndex >= dialogue.length) {
@@ -57,22 +58,20 @@
       if (lovePoints >= 5 && dialogueIndex >= dialogue.length) {
         var kissButton = document.createElement("button");
         kissButton.innerHTML = "Kiss her";
-        kissButton.onclick = function() {
+        kissButton.onclick = function () {
           document.getElementById("kissImage").style.display = "block";
           document.getElementById("dateButton").style.display = "block";
-          if (dateStarted) {
-            document.getElementById("dateLink").style.display = "block";
-          }
+          document.getElementById("dateLink").style.display = "inline"; // Show the link
           alert("You got the kiss!");
         };
         document.getElementById("kissImageContainer").appendChild(kissButton);
       }
     }
 
+
     function goOnDate() {
       var textWrapper = document.getElementById("text-wrapper");
       textWrapper.innerHTML = "<h1>You go to a Vegan Trailer in Dayton with Mars...</h1><p>Mars orders a seitan philly sandwich. You order a tofu bánh mì. But when you take a bite into the sandwich, you find it to be filled with worms. Worms whose insides are crunchy microchips. </p>";
-      dateStarted = true;
     }
   </script>
 
