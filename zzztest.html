@@ -8,18 +8,23 @@
 		}
 	</style>
 	<script>
-		var texts = ["Hello", "Hola", "Bonjour", "こんにちは"]; // List of texts
+		var texts = [
+			{ text: "Hello", color: "black", size: "16px" },
+			{ text: "Hola", color: "red", size: "20px" },
+			{ text: "Bonjour", color: "blue", size: "24px" },
+			{ text: "こんにちは", color: "green", size: "18px" }
+		]; // List of texts, colors, and font sizes
 		
 		function changeText() {
 			var currentText = this.innerHTML; // Get current text
-			var index = texts.indexOf(currentText); // Find index of current text in list
+			var index = texts.findIndex(t => t.text === currentText); // Find index of current text in list
 			
-			// Change text to next text in list
-			if (index < texts.length - 1) {
-				this.innerHTML = texts[index + 1];
-			} else {
-				this.innerHTML = texts[0];
-			}
+			// Change text, color, and font size to next item in list
+			var nextIndex = (index + 1) % texts.length; // Loop back to the beginning if we've reached the end
+			var nextText = texts[nextIndex];
+			this.innerHTML = nextText.text;
+			this.style.color = nextText.color;
+			this.style.fontSize = nextText.size;
 		}
 		
 		window.onload = function() {
