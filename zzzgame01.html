@@ -18,7 +18,7 @@
 
 <body>
   <div id="text-wrapper">
-    <h1>uRiAh'S dReAm</h1>
+    <h1>uRiAh'S dReam</h1>
     
     <p id="dialogue"></p>
     <button onclick="talk()">chattin' w/ Mars</button>
@@ -41,26 +41,26 @@
     ];
 
     function talk() {
-      if (dialogueIndex >= dialogue.length) {
-        return; // No more dialogue options
-      }
-      var message = dialogue[dialogueIndex];
-      dialogueIndex++;
-      var dialogueElement = document.getElementById("dialogue");
-      dialogueElement.innerHTML = message;
-      lovePoints++;
-      document.getElementById("lovePoints").innerHTML = lovePoints;
-      if (lovePoints >= 5 && dialogueIndex >= dialogue.length) {
-        var kissButton = document.createElement("button");
-        kissButton.innerHTML = "Kiss her";
-        kissButton.onclick = function() {
-          document.getElementById("kissImage").style.display = "block";
-          document.getElementById("dateButton").style.display = "block";
-          alert("You got the kiss!");
-        };
-        document.getElementById("kissImageContainer").appendChild(kissButton);
-      }
-    }
+  if (dialogueIndex >= dialogue.length) {
+    return; // No more dialogue options
+  }
+  var message = dialogue[dialogueIndex];
+  dialogueIndex++;
+  var dialogueElement = document.getElementById("dialogue");
+  dialogueElement.innerHTML = message;
+  lovePoints++;
+  if (lovePoints >= 5 && dialogueIndex >= dialogue.length) {
+    var kissButton = document.createElement("button");
+    kissButton.innerHTML = "Kiss her";
+    kissButton.onclick = function() {
+      document.getElementById("kissImage").style.display = "block";
+      document.getElementById("dateButton").style.display = "block";
+      alert("You got the kiss!");
+    };
+    document.getElementById("kissImageContainer").appendChild(kissButton);
+  }
+}
+
 
     function goOnDate() {
       var textWrapper = document.getElementById("text-wrapper");
