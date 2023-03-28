@@ -3,12 +3,20 @@
   <head>
     <meta charset="UTF-8">
     <title>Love Points Game</title>
+    <style>
+      #kissImage {
+        display: none;
+      }
+    </style>
   </head>
   <body>
     <h1>Love Points Game</h1>
     <p>Love Points: <span id="lovePoints">0</span></p>
     <p id="dialogue"></p>
     <button onclick="talk()">Talk to the girl</button>
+    <div id="kissImageContainer">
+      <img id="kissImage" src="images/AntarcticFlagWaving.gif" alt="Kiss Image">
+    </div>
     <script>
       var lovePoints = 0;
       var dialogueIndex = 0;
@@ -34,7 +42,10 @@
         if (lovePoints >= 5 && dialogueIndex >= dialogue.length) {
           var kissButton = document.createElement("button");
           kissButton.innerHTML = "Kiss her";
-          kissButton.onclick = function() { alert("You got the kiss!"); };
+          kissButton.onclick = function() {
+            document.getElementById("kissImage").style.display = "block";
+            alert("You got the kiss!");
+          };
           document.body.appendChild(kissButton);
         }
       }
