@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <link rel="stylesheet" href="style.css">
-  <title>uriah's phantasy</title>
+  <title>uRiAh's pHaNtAsY</title>
 
   <style>
     #kissImage {
@@ -13,7 +13,7 @@
     #dateButton {
       display: none;
     }
-    #newPageLink {
+    #dateLink {
       display: none;
     }
   </style>
@@ -28,8 +28,8 @@
     <div id="kissImageContainer">
       <img id="kissImage" src="images/kiss.gif" alt="Kiss Image">
       <button id="dateButton" onclick="goOnDate()">Go on a Date</button>
+      <a id="dateLink" href="newpage.html">Next adventure</a>
     </div>
-    <a id="newPageLink" href="0756.html">(next page)</a>
   </div>
 
   <script>
@@ -43,34 +43,36 @@
       "I really, really, really like being around you.",
       "Do you consent to my pressing my lips against your lips?"
     ];
+    var dateStarted = false;
 
     function talk() {
-  if (dialogueIndex >= dialogue.length) {
-    return; // No more dialogue options
-  }
-  var message = dialogue[dialogueIndex];
-  dialogueIndex++;
-  var dialogueElement = document.getElementById("dialogue");
-  dialogueElement.innerHTML = message;
-  lovePoints++;
-  if (lovePoints >= 5 && dialogueIndex >= dialogue.length) {
-    var kissButton = document.createElement("button");
-    kissButton.innerHTML = "Kiss her";
-    kissButton.onclick = function() {
-      document.getElementById("kissImage").style.display = "block";
-      document.getElementById("dateButton").style.display = "block";
-      document.getElementById("newPageLink").style.display = "block";
-      alert("You got the kiss!");
-    };
-    document.getElementById("kissImageContainer").appendChild(kissButton);
-  }
-}
-
+      if (dialogueIndex >= dialogue.length) {
+        return; // No more dialogue options
+      }
+      var message = dialogue[dialogueIndex];
+      dialogueIndex++;
+      var dialogueElement = document.getElementById("dialogue");
+      dialogueElement.innerHTML = message;
+      lovePoints++;
+      if (lovePoints >= 5 && dialogueIndex >= dialogue.length) {
+        var kissButton = document.createElement("button");
+        kissButton.innerHTML = "Kiss her";
+        kissButton.onclick = function() {
+          document.getElementById("kissImage").style.display = "block";
+          document.getElementById("dateButton").style.display = "block";
+          if (dateStarted) {
+            document.getElementById("dateLink").style.display = "block";
+          }
+          alert("You got the kiss!");
+        };
+        document.getElementById("kissImageContainer").appendChild(kissButton);
+      }
+    }
 
     function goOnDate() {
       var textWrapper = document.getElementById("text-wrapper");
       textWrapper.innerHTML = "<h1>You go to a Vegan Trailer in Dayton with Mars...</h1><p>Mars orders a seitan philly sandwich. You order a tofu bánh mì. But when you take a bite into the sandwich, you find it to be filled with worms. Worms whose insides are crunchy microchips. </p>";
-      document.getElementById("newPageLink").style.display = "block";
+      dateStarted = true;
     }
   </script>
 
