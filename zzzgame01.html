@@ -4,13 +4,13 @@
 <head>
   <meta charset="UTF-8">
   <link rel="stylesheet" href="style.css">
-  <title>Hector is Dreaming</title>
+  <title>Love Dream</title>
 
   <style>
     #kissImage {
       display: none;
     }
-    #dateButton {
+    .date-button {
       display: none;
     }
   </style>
@@ -24,7 +24,11 @@
     <button onclick="talk()">Talk to Mars</button>
     <div id="kissImageContainer">
       <img id="kissImage" src="images/kiss.gif" alt="Kiss Image">
-      <button id="dateButton" onclick="goOnDate()">Go on a Date</button>
+    </div>
+    <div id="date-buttons">
+      <button onclick="neoliberalism()">Talk about neoliberalism</button>
+      <button onclick="genderAbolition()">Talk about gender abolition</button>
+      <button onclick="mining()">Talk about mining of the moon</button>
     </div>
   </div>
 
@@ -37,7 +41,12 @@
       "Higher taxation for the ultra-wealthy makes sense to me!",
       "Do you want to come over to my house to crayon sometime?",
       "I really, really, really like being around you.",
-      "Do you consent to my pressing my lips against your lips?"
+      "Do you consent to my pressing my lips against your lips?",
+      "This is a great date, right?",
+      "I'm having so much fun with you!",
+      "Wow, you really understand me.",
+      "I can't believe I'm lucky enough to be here with you.",
+      "I think I'm falling in love with you."
     ];
 
     function talk() {
@@ -51,20 +60,25 @@
       lovePoints++;
       document.getElementById("lovePoints").innerHTML = lovePoints;
       if (lovePoints >= 5 && dialogueIndex >= dialogue.length) {
-        var kissButton = document.createElement("button");
-        kissButton.innerHTML = "Kiss Mars";
-        kissButton.onclick = function() {
-          document.getElementById("kissImage").style.display = "block";
-          document.getElementById("dateButton").style.display = "block";
-          alert("You got the kiss!");
-        };
-        document.getElementById("kissImageContainer").appendChild(kissButton);
+        document.getElementById("kissImage").style.display = "block";
+        document.getElementById("date-buttons").style.display = "block";
+        alert("You got the kiss!");
       }
     }
 
-    function goOnDate() {
-      var textWrapper = document.getElementById("text-wrapper");
-      textWrapper.innerHTML = "<h1>Congratulations!</h1><p>You're going on a date with Mars!</p>";
+    function neoliberalism() {
+      lovePoints++;
+      document.getElementById("lovePoints").innerHTML = lovePoints;
+    }
+
+    function genderAbolition() {
+      lovePoints--;
+      document.getElementById("lovePoints").innerHTML = lovePoints;
+    }
+
+    function mining() {
+      lovePoints++;
+      document.getElementById("lovePoints").innerHTML = lovePoints;
     }
   </script>
 
