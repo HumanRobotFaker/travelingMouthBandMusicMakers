@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <link rel="stylesheet" href="style.css">
-  <title>Hector's Dream</title>
+  <title>Hector is Dreaming</title>
 
   <style>
     #kissImage {
@@ -24,8 +24,8 @@
     <button onclick="talk()">Talk to Mars</button>
     <div id="kissImageContainer">
       <img id="kissImage" src="images/AntarcticFlagWaving.gif" alt="Kiss Image">
+      <button id="dateButton" onclick="goOnDate()">Go on a Date</button>
     </div>
-    <button id="dateButton" onclick="goOnDate()">Go on a date</button>
   </div>
 
   <script>
@@ -56,15 +56,15 @@
         kissButton.onclick = function() {
           document.getElementById("kissImage").style.display = "block";
           document.getElementById("dateButton").style.display = "block";
-          kissButton.style.display = "none";
           alert("You got the kiss!");
         };
-        document.body.appendChild(kissButton);
+        document.getElementById("kissImageContainer").appendChild(kissButton);
       }
     }
 
     function goOnDate() {
-      document.getElementById("text-wrapper").innerHTML = "<h1>Congratulations!</h1><p>You're going on a date with Mars!</p>";
+      var textWrapper = document.getElementById("text-wrapper");
+      textWrapper.innerHTML = "<h1>Congratulations!</h1><p>You're going on a date with Mars!</p>";
     }
   </script>
 
