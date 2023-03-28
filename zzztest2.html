@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Click to Change Text</title>
+	<style>
+		.text {
+			cursor: pointer; /* Change cursor to pointer on hover */
+		}
+	</style>
+	<script>
+		var texts = [
+			{ text: "Hello", color: "black", size: "16px" },
+			{ text: "Hola", color: "red", size: "20px" },
+			{ text: "Bonjour", color: "blue", size: "24px" },
+			{ text: "こんにちは", color: "green", size: "18px" }
+		]; // List of texts, colors, and font sizes
+		
+		var interval = 2000; // Initial delay between auto-clicks in milliseconds
+		var autoClickTimer = null; // Timer for auto-click feature
+		
+		function changeText() {
+			var currentText = this.innerHTML; // Get current text
+			var index = texts.findIndex(t => t.text === currentText); // Find index of current text in list
+			
+			// Change text, color, and font size to next item in list
+			var nextIndex = (index + 1) % texts.length; // Loop back to the beginning if we've reached the end
+			var nextText = texts[nextIndex];
+			this.innerHTML = nextText.text;
+			this.style.color = nextText.color;
+			this.style.fontSize = nextText.size;
+		}
+		
+		function startAutoClick() {
+			if (autoClickTimer) return; // Don't start if already running
+			
+			autoClickTimer = setInterval(function() {
+				var textElements = document.getElementsByClassName("text"); // Get all elements with class "text"
+				
+				// Click each text element in order
+				for (var i = 0; i < textElements.length; i++) {
+					changeText.call(textElements[i]);
+				}
+			}, interval);
+		}
+		
+		function stopAutoClick() {
+			clearInterval(autoClickTimer);
+			autoClickTimer = null;
+		}
+		
+		window.onload = function() {
+			var textElements = document.getElementsByClassName("text"); // Get all elements with class "text"
+			
+			// Add click event listener to each text element
+			for (var i = 0; i < textElements.length; i++) {
+				textElements[i].addEventListener("click", changeText);
+			}
+			
+			// Add button event listeners for auto-click feature
+			document.getElementById("startButton").addEventListener("click", startAutoClick);
+			document.getElementById("stopButton").addEventListener("click", stopAutoClick);
+			document.getElementById("intervalInput").addEventListener("change", function() {
+				interval = parseInt(this.value);
+				stopAutoClick();
+				startAutoClick();
+			});
+		};
+	</script>
+</head>
+<body>
+	<p class="text">Hello</p>
+	<p class="text">Hola</p>
+	<p class="text">Bonjour</p>
+	<p class="text">こんにちは</p>
+	
+	<!-- Controls for auto-click feature -->
+	<label for="intervalInput">Interval:</label>
+	<input id="intervalInput" type="number" value="2000" min="100" max="10000" step="100">
+	<button id="startButton">Start</button>
+	<button id="stopButton">Stop</button>
+</body>
+</html>
