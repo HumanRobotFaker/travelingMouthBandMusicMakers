@@ -21,18 +21,16 @@
 
   <body>
     <div id="text-wrapper">
-
-
-    <h1>Hector's Dream</h1>
-    <p>Love Points: <span id="lovePoints">0</span></p>
-    <p id="dialogue"></p>
-    <button onclick="talk()">Talk to Mars</button>
-    <div id="kissImageContainer">
-      <img id="kissImage" src="images/AntarcticFlagWaving.gif" alt="Kiss Image">
+      <h1>Hector's Dream</h1>
+      <p>Love Points: <span id="lovePoints">0</span></p>
+      <p id="dialogue"></p>
+      <button onclick="talk()">Talk to Mars</button>
+      <div id="kissImageContainer">
+        <img id="kissImage" src="images/AntarcticFlagWaving.gif" alt="Kiss Image">
+      </div>
+      <div id="kissButtonContainer"></div>
     </div>
-
-
-
+  
     <script>
       var lovePoints = 0;
       var dialogueIndex = 0;
@@ -44,7 +42,7 @@
         "I really, really, really like being around you.",
         "Do you consent to my pressing my lips against your lips?"
       ];
-      
+  
       function talk() {
         if (dialogueIndex >= dialogue.length) {
           return; // No more dialogue options
@@ -56,19 +54,19 @@
         lovePoints++;
         document.getElementById("lovePoints").innerHTML = lovePoints;
         if (lovePoints >= 5 && dialogueIndex >= dialogue.length) {
+          var kissButtonContainer = document.getElementById("kissButtonContainer");
           var kissButton = document.createElement("button");
           kissButton.innerHTML = "Kiss her";
           kissButton.onclick = function() {
             document.getElementById("kissImage").style.display = "block";
             alert("You got the kiss!");
           };
-          document.body.appendChild(kissButton);
+          kissButtonContainer.appendChild(kissButton);
         }
       }
     </script>
-
-
   </body>
+  
   <script src="popup-data.js"></script>
   <script src="js.js"></script> 
 </html>
