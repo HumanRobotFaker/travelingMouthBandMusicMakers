@@ -4,13 +4,14 @@
 <head>
   <meta charset="UTF-8">
   <link rel="stylesheet" href="style.css">
-  <title>Love Dream</title>
+  <title>Love Dream2</title>
 
   <style>
     #kissImage {
       display: none;
     }
-    .date-button {
+
+    #date-buttons {
       display: none;
     }
   </style>
@@ -61,8 +62,8 @@
       document.getElementById("lovePoints").innerHTML = lovePoints;
       if (lovePoints >= 5 && dialogueIndex >= dialogue.length) {
         document.getElementById("kissImage").style.display = "block";
-        document.getElementById("date-buttons").style.display = "block";
         alert("You got the kiss!");
+        document.getElementById("date-buttons").style.display = "block";
       }
     }
 
