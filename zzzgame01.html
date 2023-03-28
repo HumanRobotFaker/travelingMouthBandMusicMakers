@@ -1,72 +1,73 @@
 <!DOCTYPE html>
 <html>
 
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="style.css">
+  <title>Love Points Game</title>
 
+  <style>
+    #kissImage {
+      display: none;
+    }
+    #dateButton {
+      display: none;
+    }
+  </style>
+</head>
 
-  <head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="style.css">
-    <title>Love Points Game</title>
-
-
-    <style>
-      #kissImage {
-        display: none;
-      }
-    </style>
-  </head>
-
-
-
-
-  <body>
-    <div id="text-wrapper">
-      <h1>Hector's Dream</h1>
-      <p>Love Points: <span id="lovePoints">0</span></p>
-      <p id="dialogue"></p>
-      <button onclick="talk()">Talk to Mars</button>
-      <div id="kissImageContainer">
-        <img id="kissImage" src="images/AntarcticFlagWaving.gif" alt="Kiss Image">
-      </div>
-      <div id="kissButtonContainer"></div>
+<body>
+  <div id="text-wrapper">
+    <h1>Hector's Dream</h1>
+    <p>Love Points: <span id="lovePoints">0</span></p>
+    <p id="dialogue"></p>
+    <button onclick="talk()">Talk to Mars</button>
+    <div id="kissImageContainer">
+      <img id="kissImage" src="images/AntarcticFlagWaving.gif" alt="Kiss Image">
     </div>
-  
-    <script>
-      var lovePoints = 0;
-      var dialogueIndex = 0;
-      var dialogue = [
-        "Hey Mars! I think the patriarchy should be taken down too!",
-        "Static gender norms are so overrated.",
-        "Higher taxation for the ultra-wealthy makes sense to me!",
-        "Do you want to come over to my house to crayon sometime?",
-        "I really, really, really like being around you.",
-        "Do you consent to my pressing my lips against your lips?"
-      ];
-  
-      function talk() {
-        if (dialogueIndex >= dialogue.length) {
-          return; // No more dialogue options
-        }
-        var message = dialogue[dialogueIndex];
-        dialogueIndex++;
-        var dialogueElement = document.getElementById("dialogue");
-        dialogueElement.innerHTML = message;
-        lovePoints++;
-        document.getElementById("lovePoints").innerHTML = lovePoints;
-        if (lovePoints >= 5 && dialogueIndex >= dialogue.length) {
-          var kissButtonContainer = document.getElementById("kissButtonContainer");
-          var kissButton = document.createElement("button");
-          kissButton.innerHTML = "Kiss her";
-          kissButton.onclick = function() {
-            document.getElementById("kissImage").style.display = "block";
-            alert("You got the kiss!");
-          };
-          kissButtonContainer.appendChild(kissButton);
-        }
+    <button id="dateButton" onclick="goOnDate()">Go on a date</button>
+  </div>
+
+  <script>
+    var lovePoints = 0;
+    var dialogueIndex = 0;
+    var dialogue = [
+      "Hey Mars! I think the patriarchy should be taken down too!",
+      "Static gender norms are so overrated.",
+      "Higher taxation for the ultra-wealthy makes sense to me!",
+      "Do you want to come over to my house to crayon sometime?",
+      "I really, really, really like being around you.",
+      "Do you consent to my pressing my lips against your lips?"
+    ];
+
+    function talk() {
+      if (dialogueIndex >= dialogue.length) {
+        return; // No more dialogue options
       }
-    </script>
-  </body>
-  
-  <script src="popup-data.js"></script>
-  <script src="js.js"></script> 
+      var message = dialogue[dialogueIndex];
+      dialogueIndex++;
+      var dialogueElement = document.getElementById("dialogue");
+      dialogueElement.innerHTML = message;
+      lovePoints++;
+      document.getElementById("lovePoints").innerHTML = lovePoints;
+      if (lovePoints >= 5 && dialogueIndex >= dialogue.length) {
+        var kissButton = document.createElement("button");
+        kissButton.innerHTML = "Kiss her";
+        kissButton.onclick = function() {
+          document.getElementById("kissImage").style.display = "block";
+          document.getElementById("dateButton").style.display = "block";
+          kissButton.style.display = "none";
+          alert("You got the kiss!");
+        };
+        document.body.appendChild(kissButton);
+      }
+    }
+
+    function goOnDate() {
+      document.getElementById("text-wrapper").innerHTML = "<h1>Congratulations!</h1><p>You're going on a date with Mars!</p>";
+    }
+  </script>
+
+</body>
+
 </html>
