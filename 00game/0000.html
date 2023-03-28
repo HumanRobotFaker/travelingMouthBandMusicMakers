@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <link rel="stylesheet" href="style.css">
-  <title>uriah's pHANtasy</title>
+  <title>uriah's dream</title>
 
   <style>
     #kissImage {
@@ -46,7 +46,7 @@
       "I really, really, really like being around you.",
       "Do you consent to my pressing my lips against your lips?"
     ];
-
+  
     function talk() {
       if (dialogueIndex >= dialogue.length) {
         return; // No more dialogue options
@@ -62,25 +62,23 @@
         kissButton.onclick = function () {
           document.getElementById("kissImage").style.display = "block";
           document.getElementById("dateButton").style.display = "block";
-          document.getElementById("dateLink").style.display = "inline"; // Show the link
           alert("You got the kiss!");
         };
         document.getElementById("kissImageContainer").appendChild(kissButton);
       }
     }
-
-
+  
     function goOnDate() {
-  var textWrapper = document.getElementById("text-wrapper");
-  textWrapper.innerHTML = "<h1>You go to a Vegan Trailer in Dayton with Mars...</h1><p>Mars orders a seitan philly sandwich. You order a tofu bánh mì. But when you take a bite into the sandwich, you find it to be filled with worms. Worms whose insides are crunchy microchips. </p>";
-
-  var dateLink = document.getElementById("dateLink");
-  dateLink.style.display = "inline"; // Show the link
-}
-
-    
-
+      var textWrapper = document.getElementById("text-wrapper");
+      textWrapper.innerHTML = "<h1>You go to a Vegan Trailer in Dayton with Mars...</h1><p>Mars orders a seitan philly sandwich. You order a tofu bánh mì. But when you take a bite into the sandwich, you find it to be filled with worms. Worms whose insides are crunchy microchips.</p>";
+      var dateLink = document.createElement("a");
+      dateLink.id = "dateLink";
+      dateLink.href = "0756.html";
+      dateLink.innerHTML = "The Evening continues...";
+      textWrapper.appendChild(dateLink);
+    }
   </script>
+  
 
 </body>
 
