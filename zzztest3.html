@@ -1,49 +1,47 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Pop-up Definitions</title>
+	<title>Clickable Vocabulary Terms</title>
 	<style>
-		.bold {
-			font-weight: bold;
-			cursor: pointer;
+		.container {
+			max-width: 800px;
+			margin: 0 auto;
+			font-size: 18px;
+			line-height: 1.6;
 		}
 		
-		.popup {
-			display: none;
-			position: absolute;
-			background-color: #f9f9f9;
-			border: 1px solid #ccc;
-			border-radius: 5px;
+		.defined-term {
+			font-weight: bold;
+			position: relative; /* Set position relative for tooltip positioning */
+		}
+		
+		.defined-term:hover::after {
+			content: attr(data-definition); /* Show definition on hover */
+			position: absolute; /* Set position absolute for tooltip positioning */
+			top: 0;
+			right: 120%; /* Position the tooltip to the right of the term */
+			width: 200px;
 			padding: 10px;
-			z-index: 1;
-			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+			background-color: #f1f1f1;
+			box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+			border-radius: 5px;
+			font-size: 16px;
+			line-height: 1.2;
+			z-index: 1; /* Set higher z-index to display tooltip above other content */
 		}
 	</style>
-	<script>
-		window.onload = function() {
-			var boldElements = document.getElementsByClassName("bold"); // Get all elements with class "bold"
-			
-			// Add mouseover and mouseout event listeners to each bold element
-			for (var i = 0; i < boldElements.length; i++) {
-				boldElements[i].addEventListener("mouseover", showPopup);
-				boldElements[i].addEventListener("mouseout", hidePopup);
-			}
-		};
-		
-		function showPopup() {
-			var popup = this.nextElementSibling; // Get the next element, which should be the popup
-			popup.style.display = "block";
-		}
-		
-		function hidePopup() {
-			var popup = this.nextElementSibling; // Get the next element, which should be the popup
-			popup.style.display = "none";
-		}
-	</script>
 </head>
 <body>
-	<p>Lorem ipsum dolor sit amet, <span class="bold">consectetur adipiscing elit</span>. Sed vitae elit euismod, congue justo non, malesuada felis. Integer luctus turpis quam, nec ultricies metus pretium in. Donec in dui <span class="bold">eget turpis suscipit</span> gravida. Fusce eu leo tellus. </p>
-	<div class="popup">Definition of "consectetur adipiscing elit": Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ac lectus tristique, faucibus lectus eu, aliquet urna. Duis quis sapien vel urna iaculis imperdiet.</div>
-	<div class="popup">Definition of "eget turpis suscipit gravida": Aliquam bibendum commodo mauris, vel bibendum lorem tristique quis. Integer et magna commodo, rhoncus velit ac, faucibus lacus.</div>
+	<div class="container">
+		<p>
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+			<span class="defined-term" data-definition="A small piece of text that is displayed when a user hovers over or clicks on a term.">Tooltip</span> 
+			erat volutpat. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+			<span class="defined-term" data-definition="A web page that serves as an entry point for a website or a particular section of a website.">Homepage</span> 
+			duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+			<span class="defined-term" data-definition="A programming language that is used to create web pages.">HTML</span> 
+			excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		</p>
+	</div>
 </body>
 </html>
