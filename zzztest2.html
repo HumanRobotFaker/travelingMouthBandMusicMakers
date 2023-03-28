@@ -1,77 +1,73 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Click to Change Text</title>
+	<title>Scientific Terms Pop-up Example</title>
 	<style>
-		.text {
+		.term {
 			cursor: pointer; /* Change cursor to pointer on hover */
+			font-weight: bold; /* Make text bold */
+		}
+		
+		.popup {
+			position: absolute;
+			top: 50px;
+			left: 50px;
+			width: 200px;
+			height: 100px;
+			background-color: white;
+			border: 1px solid black;
+			padding: 10px;
+			display: none; /* Hide popup by default */
+			z-index: 1; /* Make popup appear on top of other elements */
 		}
 	</style>
 	<script>
-		var texts = [
-			{ text: "Hello", color: "black", size: "16px" },
-			{ text: "Hola", color: "red", size: "20px" },
-			{ text: "Bonjour", color: "blue", size: "24px" },
-			{ text: "こんにちは", color: "green", size: "18px" }
-		]; // List of texts, colors, and font sizes
-		
-		var interval = <?php echo getAutoClickInterval(); ?>; // Get auto-click interval from server-side code
-		
-		var autoClickTimer = null; // Timer for auto-click feature
-		
-		function changeText() {
-			var currentText = this.innerHTML; // Get current text
-			var index = texts.findIndex(t => t.text === currentText); // Find index of current text in list
-			
-			// Change text, color, and font size to next item in list
-			var nextIndex = (index + 1) % texts.length; // Loop back to the beginning if we've reached the end
-			var nextText = texts[nextIndex];
-			this.innerHTML = nextText.text;
-			this.style.color = nextText.color;
-			this.style.fontSize = nextText.size;
-		}
-		
-		function startAutoClick() {
-			if (autoClickTimer) return; // Don't start if already running
-			
-			autoClickTimer = setInterval(function() {
-				var textElements = document.getElementsByClassName("text"); // Get all elements with class "text"
-				
-				// Click each text element in order
-				for (var i = 0; i < textElements.length; i++) {
-					changeText.call(textElements[i]);
-				}
-			}, interval);
-		}
-		
-		function stopAutoClick() {
-			clearInterval(autoClickTimer);
-			autoClickTimer = null;
-		}
-		
 		window.onload = function() {
-			var textElements = document.getElementsByClassName("text"); // Get all elements with class "text"
+			var terms = [
+				{ term: "Biodiversity", definition: "The variety of life on Earth, including the number and types of species, the genetic diversity within species, and the diversity of ecosystems" },
+				{ term: "Climate Change", definition: "A long-term change in the average weather patterns that have come to define Earth's local, regional and global climates" },
+				{ term: "Photosynthesis", definition: "The process by which green plants and some other organisms use sunlight to synthesize foods with the help of chlorophyll and other pigments" }
+			]; // List of terms and their definitions
 			
-			// Add click event listener to each text element
-			for (var i = 0; i < textElements.length; i++) {
-				textElements[i].addEventListener("click", changeText);
+			var popup = document.getElementById("popup"); // Get the popup element
+			var termElements = document.getElementsByClassName("term"); // Get all elements with class "term"
+			
+			// Add click event listener to each term element
+			for (var i = 0; i < termElements.length; i++) {
+				termElements[i].addEventListener("click", function() {
+					var currentTerm = this.innerHTML; // Get current term
+					var index = terms.findIndex(t => t.term === currentTerm); // Find index of current term in list
+					
+					// Update popup with current term's definition and show it
+					var currentDefinition = terms[index].definition;
+					var popupContent = document.getElementById("popup-content");
+					popupContent.innerHTML = currentDefinition;
+					popup.style.display = "block";
+				});
 			}
 			
-			// Add button event listeners for auto-click feature
-			document.getElementById("startButton").addEventListener("click", startAutoClick);
-			document.getElementById("stopButton").addEventListener("click", stopAutoClick);
+			// Hide popup when clicked outside of it
+			window.addEventListener("click", function(event) {
+				if (event.target == popup) {
+					popup.style.display = "none";
+				}
+			});
 		};
 	</script>
 </head>
 <body>
-	<p class="text">Hello</p>
-	<p class="text">Hola</p>
-	<p class="text">Bonjour</p>
-	<p class="text">こんにちは</p>
+	<p>
+		<span class="term">Biodiversity</span> is important for maintaining healthy ecosystems.
+	</p>
+	<p>
+		<span class="term">Climate Change</span> is a major global challenge.
+	</p>
+	<p>
+		<span class="term">Photosynthesis</span> is how plants produce their own food.
+	</p>
 	
-	<!-- Controls for auto-click feature -->
-	<input id="intervalInput" type="hidden" value="<?php echo getAutoClickInterval(); ?>">
-	<button id="startButton">Start</button>
-	<button id="stopButton">Stop</button>
+	<div id="popup">
+		<div id="popup-content"></div>
+	</div>
 </body>
 </html>
