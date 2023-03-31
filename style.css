@@ -92,6 +92,11 @@ a:hover {
   display: block;
 }
 
+.censored {
+  background-color: black;
+  color: black;
+}
+
 #text-wrapper {
   width: 60%;
   margin: auto;
