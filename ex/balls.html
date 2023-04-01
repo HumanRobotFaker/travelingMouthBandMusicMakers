@@ -20,10 +20,13 @@
         canvas.height = window.innerHeight;
     
         // Define text box properties
-        const text = 'Hector of [suburbia] and the Traveling Mouth Band Music-Makers';
+        const text = 'Hector of [suburbia] <BR>and <BR>the Traveling Mouth Band Music-Makers';
         const textColor = 'black';
         const textSize = 44;
-
+        const textBoxWidth = 200;
+        const textBoxHeight = 50;
+        const textBoxX = canvas.width / 2 - textBoxWidth / 2;
+        const textBoxY = canvas.height / 2 - textBoxHeight / 2;
     
         // Draw text box and text
         ctx.fillStyle = 'white';
