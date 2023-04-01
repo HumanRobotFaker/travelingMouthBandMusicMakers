@@ -19,26 +19,26 @@
         canvas.width = window.innerWidth;
         canvas.height = window.innerHeight;
     
-// Define text box properties
-const text = 'Hector of [suburbia]\nand\nthe Traveling Mouth Band Music-Makers';
-const textColor = 'black';
-const textSize = 44;
-const textBoxWidth = 200;
-const lineSpacing = 10;
-const textBoxX = canvas.width / 2 - textBoxWidth / 2;
-const textBoxHeight = text.split('\n').length * textSize + (text.split('\n').length - 1) * lineSpacing;
-const textBoxY = canvas.height / 2 - textBoxHeight / 2;
-
-// Draw text box and text
-ctx.fillStyle = 'white';
-ctx.fillRect(textBoxX, textBoxY, textBoxWidth, text.split('\n').length * textSize + (text.split('\n').length - 1) * lineSpacing);
-ctx.fillStyle = textColor;
-ctx.font = `${textSize}px sans-serif`;
-ctx.textAlign = 'center';
-const lines = text.split('\n');
-for (let i = 0; i < lines.length; i++) {
-  ctx.fillText(lines[i], canvas.width / 2, textBoxY + i * (textSize + lineSpacing) + textSize);
-}
+        // Define text box properties
+        const text = 'Hector of [suburbia]\nand\nthe Traveling Mouth Band Music-Makers';
+        const textColor = 'black';
+        const textSize = 44;
+        const textBoxWidth = 200;
+        const lineSpacing = 10;
+        const textBoxX = canvas.width / 2 - textBoxWidth / 2;
+        const textBoxHeight = text.split('\n').length * textSize + (text.split('\n').length - 1) * lineSpacing;
+        const textBoxY = canvas.height / 2 - textBoxHeight / 2;
+    
+        // Draw text box and text
+        ctx.fillStyle = 'white';
+        ctx.fillRect(textBoxX, textBoxY, textBoxWidth, text.split('\n').length * textSize + (text.split('\n').length - 1) * lineSpacing);
+        ctx.fillStyle = textColor;
+        ctx.font = `${textSize}px sans-serif`;
+        ctx.textAlign = 'center';
+        const lines = text.split('\n');
+        for (let i = 0; i < lines.length; i++) {
+          ctx.fillText(lines[i], canvas.width / 2, textBoxY + i * (textSize + lineSpacing) + textSize);
+        }
     
         // Circle object
         class Circle {
@@ -84,6 +84,9 @@ for (let i = 0; i < lines.length; i++) {
             const color = `rgb(${Math.random() * 255}, ${Math.random() * 255}, ${Math.random() * 255})`;
             circles.push(new Circle(x, y, r, vx, vy, color));
         }
+    
+       
+
     
         // Update and draw circles every 30 milliseconds
         setInterval(() => {
