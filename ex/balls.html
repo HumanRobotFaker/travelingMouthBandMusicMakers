@@ -10,15 +10,32 @@
 </head>
 <body>
 	<canvas id="myCanvas"></canvas>
-	<script>
+    <script>
         // Initialize canvas and context
         const canvas = document.getElementById("myCanvas");
         const ctx = canvas.getContext("2d");
-
+    
         // Set canvas dimensions
         canvas.width = window.innerWidth;
         canvas.height = window.innerHeight;
-
+    
+        // Define text box properties
+        const text = 'Hello World!';
+        const textColor = 'black';
+        const textSize = 24;
+        const textBoxWidth = 200;
+        const textBoxHeight = 50;
+        const textBoxX = canvas.width / 2 - textBoxWidth / 2;
+        const textBoxY = canvas.height / 2 - textBoxHeight / 2;
+    
+        // Draw text box and text
+        ctx.fillStyle = 'white';
+        ctx.fillRect(textBoxX, textBoxY, textBoxWidth, textBoxHeight);
+        ctx.fillStyle = textColor;
+        ctx.font = `${textSize}px sans-serif`;
+        ctx.textAlign = 'center';
+        ctx.fillText(text, canvas.width / 2, canvas.height / 2);
+    
         // Circle object
         class Circle {
             constructor(x, y, r, vx, vy, color) {
@@ -29,7 +46,7 @@
                 this.vy = vy;
                 this.color = color;
             }
-
+    
             // Draw circle on canvas
             draw() {
                 ctx.beginPath();
@@ -38,7 +55,7 @@
                 ctx.fill();
                 ctx.closePath();
             }
-
+    
             // Update circle position and velocity
             update() {
                 if (this.x - this.r < 0 || this.x + this.r > canvas.width) {
@@ -51,7 +68,7 @@
                 this.y += this.vy;
             }
         }
-
+    
         // Create circles with random positions, velocities, and colors
         const circles = [];
         for (let i = 0; i < 25; i++) {
@@ -63,7 +80,7 @@
             const color = `rgb(${Math.random() * 255}, ${Math.random() * 255}, ${Math.random() * 255})`;
             circles.push(new Circle(x, y, r, vx, vy, color));
         }
-
+    
         // Update and draw circles every 30 milliseconds
         setInterval(() => {
             ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -71,26 +88,16 @@
                 circle.update();
                 circle.draw();
             });
+    
+            // Draw text box and text again to keep it on top
+            ctx.fillStyle = 'white';
+            ctx.fillRect(textBoxX, textBoxY, textBoxWidth, textBoxHeight);
+            ctx.fillStyle = textColor;
+            ctx.font = `${textSize}px sans-serif`;
+            ctx.textAlign = 'center';
+            ctx.fillText(text, canvas.width / 2, canvas.height / 2);
         }, 30);
-        // Define text box properties
-const text = 'Hello World!';
-const textColor = 'black';
-const textSize = 24;
-const textBoxWidth = 200;
-const textBoxHeight = 50;
-const textBoxX = canvas.width / 2 - textBoxWidth / 2;
-const textBoxY = canvas.height / 2 - textBoxHeight / 2;
-
-// Draw text box
-ctx.fillStyle = 'white';
-ctx.fillRect(textBoxX, textBoxY, textBoxWidth, textBoxHeight);
-
-// Draw text
-ctx.fillStyle = textColor;
-ctx.font = `${textSize}px sans-serif`;
-ctx.textAlign = 'center';
-ctx.fillText(text, canvas.width / 2, canvas.height / 2);
-
     </script>
+    
 </body>
 </html>
