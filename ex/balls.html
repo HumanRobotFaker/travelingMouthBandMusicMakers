@@ -26,7 +26,8 @@ const textSize = 44;
 const textBoxWidth = 200;
 const lineSpacing = 10;
 const textBoxX = canvas.width / 2 - textBoxWidth / 2;
-const textBoxY = canvas.height / 2 - ((text.split('\n').length * textSize) + ((text.split('\n').length - 1) * lineSpacing)) / 2;
+const textBoxHeight = text.split('\n').length * textSize + (text.split('\n').length - 1) * lineSpacing;
+const textBoxY = canvas.height / 2 - textBoxHeight / 2;
 
 // Draw text box and text
 ctx.fillStyle = 'white';
