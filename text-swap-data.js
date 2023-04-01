@@ -32,7 +32,7 @@ const textSwapData = {
     type: "sequenced",
     index: 0,
     texts: [
-        "Angramainya",
+        "[Angramainya]",
         "Angra Mainya",
         "Ahriman",
         createLink('A H R I M A N', 'images/Author-Devolve-AI.gif')
