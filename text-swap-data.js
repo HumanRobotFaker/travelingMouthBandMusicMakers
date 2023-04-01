@@ -39,7 +39,7 @@ const textSwapData = {
     ]
 },
     
-"10megaStars" {
+"10megaStars": {
     type: "sequenced",
     index: 0,
     texts: [
