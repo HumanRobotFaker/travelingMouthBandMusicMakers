@@ -19,22 +19,25 @@
         canvas.width = window.innerWidth;
         canvas.height = window.innerHeight;
     
-        // Define text box properties
-        const text = 'Hector of [suburbia] and the Traveling Mouth Band Music-Makers';
-        const textColor = 'black';
-        const textSize = 44;
-        const textBoxWidth = 200;
-        const textBoxHeight = 50;
-        const textBoxX = canvas.width / 2 - textBoxWidth / 2;
-        const textBoxY = canvas.height / 2 - textBoxHeight / 2;
-    
+// Define text box properties
+const text = 'Hector of [suburbia]\nand\nthe Traveling Mouth Band Music-Makers';
+const textColor = 'black';
+const textSize = 44;
+const textBoxWidth = 200;
+const lineSpacing = 10;
+const textBoxX = canvas.width / 2 - textBoxWidth / 2;
+const textBoxY = canvas.height / 2 - ((text.split('\n').length * textSize) + ((text.split('\n').length - 1) * lineSpacing)) / 2;
+
 // Draw text box and text
-ctx.fillStyle = 'transparent';
-ctx.fillRect(textBoxX, textBoxY, textBoxWidth, textBoxHeight);
+ctx.fillStyle = 'white';
+ctx.fillRect(textBoxX, textBoxY, textBoxWidth, text.split('\n').length * textSize + (text.split('\n').length - 1) * lineSpacing);
 ctx.fillStyle = textColor;
 ctx.font = `${textSize}px sans-serif`;
 ctx.textAlign = 'center';
-ctx.fillText(text, canvas.width / 1, canvas.height / 1);
+const lines = text.split('\n');
+for (let i = 0; i < lines.length; i++) {
+  ctx.fillText(lines[i], canvas.width / 2, textBoxY + i * (textSize + lineSpacing) + textSize);
+}
     
         // Circle object
         class Circle {
