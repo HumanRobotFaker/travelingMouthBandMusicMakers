@@ -39,6 +39,17 @@ const textSwapData = {
     ]
 },
     
+"10megaStars" {
+    type: "sequenced",
+    index: 0,
+    texts: [
+        "10 megaStars",
+        "10 million stars",
+        "10,000,000 stars",
+    ]
+
+
+
 }
 
 
