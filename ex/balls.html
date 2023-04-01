@@ -72,6 +72,25 @@
                 circle.draw();
             });
         }, 30);
+        // Define text box properties
+const text = 'Hello World!';
+const textColor = 'black';
+const textSize = 24;
+const textBoxWidth = 200;
+const textBoxHeight = 50;
+const textBoxX = canvas.width / 2 - textBoxWidth / 2;
+const textBoxY = canvas.height / 2 - textBoxHeight / 2;
+
+// Draw text box
+ctx.fillStyle = 'white';
+ctx.fillRect(textBoxX, textBoxY, textBoxWidth, textBoxHeight);
+
+// Draw text
+ctx.fillStyle = textColor;
+ctx.font = `${textSize}px sans-serif`;
+ctx.textAlign = 'center';
+ctx.fillText(text, canvas.width / 2, canvas.height / 2);
+
     </script>
 </body>
 </html>
