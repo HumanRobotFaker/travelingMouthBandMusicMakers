@@ -35,6 +35,7 @@ ctx.fillStyle = textColor;
 ctx.font = `${textSize}px sans-serif`;
 ctx.textAlign = 'center';
 const lines = text.split('\n');
+const textBoxHeight = text.split('\n').length * textSize + (text.split('\n').length - 1) * lineSpacing;
 for (let i = 0; i < lines.length; i++) {
   ctx.fillText(lines[i], canvas.width / 2, textBoxY + i * (textSize + lineSpacing) + textSize);
 }
