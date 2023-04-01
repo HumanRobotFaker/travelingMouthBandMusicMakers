@@ -29,7 +29,7 @@ const textBoxX = canvas.width / 2 - textBoxWidth / 2;
 const textBoxY = canvas.height / 2 - ((text.split('\n').length * textSize) + ((text.split('\n').length - 1) * lineSpacing)) / 2;
 
 // Draw text box and text again to keep it on top
-ctx.fillStyle = 'white';
+ctx.fillStyle = 'transparent';
 ctx.fillRect(textBoxX, textBoxY, textBoxWidth, text.split('\n').length * textSize + (text.split('\n').length - 1) * lineSpacing);
 ctx.fillStyle = textColor;
 ctx.font = `${textSize}px sans-serif`;
