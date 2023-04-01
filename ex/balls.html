@@ -76,6 +76,9 @@
         // Create circles with random positions, velocities, and colors
         const circles = [];
         for (let i = 0; i < 25; i++) {
+            ctx.textAlign = 'center';
+            ctx.fillText(lines[i], canvas.width / 2, textBoxY + i * (textSize + lineSpacing) + textSize);
+
             const x = Math.random() * canvas.width;
             const y = Math.random() * canvas.height;
             const r = Math.random() * 50 + 10;
