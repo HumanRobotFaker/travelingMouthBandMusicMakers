@@ -28,7 +28,7 @@ const lineSpacing = 10;
 const textBoxX = canvas.width / 2 - textBoxWidth / 2;
 const textBoxY = canvas.height / 2 - ((text.split('\n').length * textSize) + ((text.split('\n').length - 1) * lineSpacing)) / 2;
 
-// Draw text box and text
+// Draw text box and text again to keep it on top
 ctx.fillStyle = 'white';
 ctx.fillRect(textBoxX, textBoxY, textBoxWidth, text.split('\n').length * textSize + (text.split('\n').length - 1) * lineSpacing);
 ctx.fillStyle = textColor;
@@ -38,6 +38,7 @@ const lines = text.split('\n');
 for (let i = 0; i < lines.length; i++) {
   ctx.fillText(lines[i], canvas.width / 2, textBoxY + i * (textSize + lineSpacing) + textSize);
 }
+
     
         // Circle object
         class Circle {
