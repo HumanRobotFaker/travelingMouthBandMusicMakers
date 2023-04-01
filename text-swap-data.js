@@ -46,6 +46,7 @@ const textSwapData = {
         "10 megaStars",
         "10 million stars",
         "10,000,000 stars",
+        createLink('10 000 000 stars', 'images/10megastars.jpeg')
     ]
 },
 
