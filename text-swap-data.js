@@ -47,6 +47,7 @@ const textSwapData = {
         "10 million stars",
         "10,000,000 stars",
     ]
+},
 
 
 
