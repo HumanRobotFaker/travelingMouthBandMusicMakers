@@ -15,6 +15,11 @@ p {
   
 }
 
+.emphasis {
+  color: grey;
+  font-family: 'American Typewriter', sans-serif;
+}
+
 li {
 font-size: 18px;
 color: grey;
