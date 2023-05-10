@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<title>
+Letter to MarsBars
+
+</title>
+<head>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+
+#text {
+  border-right: 0.15em solid black;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1.5em;
+  white-space: pre-wrap;
+  overflow: hidden;
+  animation: typing 4s steps(20, end) ;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  display: inline-block;
+}
+
+    </style>
+</head>
+
+<body>
+    <main>
+
+           <p> &nbsp&nbsp&nbsp&nbsp 
+            <div id="text-wrapper">
+            <div id="text-container">
+                <p id="text"></p>
+              </div>
+              <BR><BR><BR><a href="008.html"> .........[return]......... </a>
+            <div id="popup" class="hidden"></div>
+    </main>
+</body>
+<script> 
+       const text = "Mars Bar, <BR><BR> I should not have touched you without your consent. And since you have made clear your feelings about me, I will not attempt to change your mind in any fashion. Case closed. <BR><BR>  ";
+let index = 0;
+const textContainer = document.querySelector("#text");
+
+function writeText() {
+  textContainer.innerHTML = text.slice(0, index);
+  index++;
+  if (index > text.length) {
+    // stop the animation at the last frame
+    index = text.length;
+  } else {
+    setTimeout(writeText, 30);
+  }
+}
+
+writeText();
+
+</script>
+<script src="popup-data.js"></script>
+<script src="js.js"></script> 
+</html> 
