@@ -12,15 +12,18 @@ p {
 
 h1 {
   font-size: 48px;
+  color: grey;
 }
 
 h2 {
   font-size: 40px;
-}
-
-h3 {
-  font-size: 33px;
-}
+  color: grey;
+  }
+  
+  h3 {
+  font-size: 30px;
+  color: grey;
+  }
 
 a {
     color: black;
