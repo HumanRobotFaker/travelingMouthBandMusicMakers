@@ -320,6 +320,13 @@ const popUpData = {
         },
         classNames: ["person-id"]
     },
-    
+    "dalton-tv": {
+        tag: "img",
+        attributes: {
+            src: "./images/drdaltontv01.gif",
+        },
+        classNames: ["person-id"]
+    },
+
 }
 
