@@ -15,6 +15,24 @@ p {
   
 }
 
+.p2 {
+  font-size: 20px;
+  font-family: Verdana, sans-serif;
+  color: grey;
+  
+}
+
+
+mark {
+  background-color: darkblue;
+  color: whitesmoke;
+}
+
+.mark2 {
+  background-color: purple;
+  color: white;
+}
+
 .emphasis {
   color: grey;
   font-family: 'American Typewriter', sans-serif;
