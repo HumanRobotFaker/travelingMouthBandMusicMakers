@@ -219,7 +219,13 @@ const popUpData = {
             src: "./images/DoubleBondSwitch.gif",
         },
         classNames: ["person-id"]
-        
+    },
+    "heatloss": {
+        tag: "img",
+        attributes: {
+            src: "./images/electric-light-heat.jpg",
+        },
+        classNames: ["person-id"]
     },
     "azüul-dream": {
         tag: "img",
