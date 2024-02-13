@@ -32,6 +32,10 @@ mark {
   background-color: purple;
   color: white;
 }
+.mark3 {
+  background-color: darkgreen;
+  color: white;
+}
 
 .emphasis {
   color: grey;
