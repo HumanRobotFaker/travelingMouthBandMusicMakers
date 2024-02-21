@@ -36,6 +36,10 @@ mark {
   background-color: darkgreen;
   color: white;
 }
+.mark4 {
+  background-color: black;
+  color: black;
+}
 
 .emphasis {
   color: grey;
