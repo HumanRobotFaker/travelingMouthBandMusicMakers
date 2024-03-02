@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Image Gallery</title>
+</head>
+<body>
+    <h1>My Image Gallery</h1>
+    <div id="image-container"></div>
+    <script>
+        const imageContainer = document.getElementById('image-container');
+
+        // Function to create and display an image element
+        function displayImage(fileName, altText) {
+            const img = document.createElement('img');
+            img.src = fileName;
+            img.alt = altText;
+            imageContainer.appendChild(img);
+        }
+
+        // Get all image files in the current folder (using JavaScript)
+        const imageFiles = [];
+        const context = document.querySelector('script').parentElement; // Assuming script is inside the body
+        for (const file of context.querySelectorAll('img')) {
+            if (file.src.endsWith('.png')) { // Check if it's a PNG image
+                imageFiles.push(file.src);
+            }
+        }
+
+        // Display each image
+        for (const imageFile of imageFiles) {
+            displayImage(imageFile, 'Image'); // You can provide a specific alt text for each image
+        }
+    </script>
+</body>
+</html>
