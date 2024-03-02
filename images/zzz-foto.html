@@ -11,11 +11,15 @@
     <script>
         const imageContainer = document.getElementById('image-container');
 
-        // Function to create and display an image element
+        // Function to create and display an image element with error handling and alt text
         function displayImage(fileName, altText) {
             const img = document.createElement('img');
-            img.src = fileName;
+            img.src = `./${fileName}`; // Assuming images are in the same folder
             img.alt = altText;
+            img.onerror = function() {
+                // Handle error, e.g., display a placeholder image or message
+                img.src = "path/to/placeholder.png"; // Replace with your placeholder image path
+            };
             imageContainer.appendChild(img);
         }
 
@@ -24,13 +28,14 @@
         const context = document.querySelector('script').parentElement; // Assuming script is inside the body
         for (const file of context.querySelectorAll('img')) {
             if (file.src.endsWith('.png')) { // Check if it's a PNG image
-                imageFiles.push(file.src);
+                imageFiles.push(file.src.replace(/^.*\/|\?.*$/, '')); // Extract filename only
             }
         }
 
         // Display each image
         for (const imageFile of imageFiles) {
-            displayImage(imageFile, 'Image'); // You can provide a specific alt text for each image
+            const fileName = imageFile.replace(/^.*\/|\?.*$/, ''); // Extract filename only
+            displayImage(fileName, `Image ${fileName}`); // Provide meaningful alt text
         }
     </script>
 </body>
