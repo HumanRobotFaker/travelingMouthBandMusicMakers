@@ -1,37 +1,64 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+<title>
+Meet Xiander
+
+</title>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Image Gallery</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <h1>My Image Gallery</h1>
-    <div id="image-container"></div>
-    <script>
-        const imageContainer = document.getElementById('image-container');
+    <main>
+        <div id="text-wrapper">
 
-        // Function to create and display an image element
-        function displayImage(fileName, altText) {
-            const img = document.createElement('img');
-            img.src = fileName;
-            img.alt = altText;
-            imageContainer.appendChild(img);
-        }
 
-        // Get all image files in the current folder (using JavaScript)
-        const imageFiles = [];
-        const context = document.querySelector('script').parentElement; // Assuming script is inside the body
-        for (const file of context.querySelectorAll('img')) {
-            if (file.src.endsWith('.png')) { // Check if it's a PNG image
-                imageFiles.push(file.src);
-            }
-        }
 
-        // Display each image
-        for (const imageFile of imageFiles) {
-            displayImage(imageFile, 'Image'); // You can provide a specific alt text for each image
-        }
-    </script>
+
+        <img src = "images/primefactor/prime-004a.png" width="30%" height="30%">
+        <img src = "images/primefactor/prime-006a.png" width="30%" height="30%">
+        <img src = "images/primefactor/prime-006b.png" width="30%" height="30%">
+        <img src = "images/primefactor/prime-008a.png" width="30%" height="30%">
+        <img src = "images/primefactor/prime-008b.png" width="30%" height="30%">
+        <img src = "images/primefactor/prime-009a.png" width="30%" height="30%">
+        <img src = "images/primefactor/prime-010a.png" width="30%" height="30%">
+        <img src = "images/primefactor/prime-010b.png" width="30%" height="30%">
+        <img src = "images/primefactor/prime-012a.png" width="30%" height="30%">
+        <img src = "images/primefactor/prime-012b.png" width="30%" height="30%">
+        <img src = "images/primefactor/prime-012c.png" width="30%" height="30%">
+        <img src = "images/primefactor/prime-012d.png" width="30%" height="30%">
+        <img src = "images/primefactor/prime-012e.png" width="30%" height="30%">
+        <img src = "images/primefactor/prime-012f.png" width="30%" height="30%">
+        <img src = "images/primefactor/prime-014a.png" width="30%" height="30%">
+        <img src = "images/primefactor/prime-014b.png" width="30%" height="30%">
+        <img src = "images/primefactor/prime-015a.png" width="30%" height="30%">
+        <img src = "images/primefactor/prime-015b.png" width="30%" height="30%">
+        <img src = "images/primefactor/prime-016a.png" width="30%" height="30%">
+        <img src = "images/primefactor/prime-016b.png" width="30%" height="30%">
+        <img src = "images/primefactor/prime-016c.png" width="30%" height="30%">
+        <img src = "images/primefactor/prime-016d.png" width="30%" height="30%">
+        <img src = "images/primefactor/prime-016e.png" width="30%" height="30%">
+        <img src = "images/primefactor/prime-018a.png" width="30%" height="30%">
+        <img src = "images/primefactor/prime-018b.png" width="30%" height="30%">
+        <img src = "images/primefactor/prime-018c.png" width="30%" height="30%">
+        <img src = "images/primefactor/prime-018d.png" width="30%" height="30%">
+        <img src = "images/primefactor/prime-018e.png" width="30%" height="30%">
+        <img src = "images/primefactor/prime-018f.png" width="30%" height="30%">
+        <img src = "images/primefactor/prime-020a.png" width="30%" height="30%">
+        <img src = "images/primefactor/prime-020b.png" width="30%" height="30%">
+        <img src = "images/primefactor/prime-020c.png" width="30%" height="30%">
+        <img src = "images/primefactor/prime-020d.png" width="30%" height="30%">
+        <img src = "images/primefactor/prime-020e.png" width="30%" height="30%">
+        <img src = "images/primefactor/prime-020f.png" width="30%" height="30%">
+        <img src = "images/primefactor/prime-021a.png" width="30%" height="30%">
+        <img src = "images/primefactor/prime-021b.png" width="30%" height="30%">
+        <img src = "images/primefactor/prime-022a.png" width="30%" height="30%">
+        <img src = "images/primefactor/prime-022b.png" width="30%" height="30%">
+
+        <div id="popup" class="hidden"></div>
+    </main>
 </body>
-</html>
+
+<script src="popup-data.js"></script>
+<script src="js.js"></script> 
+</html> 
