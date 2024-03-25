@@ -23,6 +23,45 @@ p {
 }
 
 
+
+.markwhite {
+  background-color: white;
+  color: black;
+}
+.markred {
+  background-color: red;
+  color: white;
+}
+
+.markorange {
+  background-color: orange;
+  color: black;
+}
+
+.markyellow {
+  background-color: yellow;
+  color: black;
+}
+
+.markgreen {
+  background-color: green;
+  color: black;
+}
+
+.markblue {
+  background-color: skyblue;
+  color: black;
+}
+
+.markindigo {
+  background-color: indigo;
+  color: white;
+}
+.markviolet {
+  background-color: violet;
+  color: black;
+}
+
 mark {
   background-color: darkblue;
   color: whitesmoke;

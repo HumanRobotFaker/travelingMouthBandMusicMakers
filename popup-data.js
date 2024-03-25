@@ -165,6 +165,16 @@ const popUpData = {
         classNames: ["person-id"]
         
     },
+
+    "twogravity": {
+        tag: "img",
+        attributes: {
+            src: "./images/twogravity.png",
+        },
+        classNames: ["person-id"]
+        
+    },
+
     "dietcitrusdrop-bounce": {
         tag: "img",
         attributes: {
@@ -201,6 +211,13 @@ const popUpData = {
         tag: "img",
         attributes: {
             src: "./images/AntarcticFlagWaving.gif",
+        },
+        classNames: ["person-id"]
+    },
+    "hectorhouse": {
+        tag: "img",
+        attributes: {
+            src: "./images/HectorHouse.gif",
         },
         classNames: ["person-id"]
     },
