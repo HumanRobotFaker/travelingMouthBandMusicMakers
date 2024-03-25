@@ -228,6 +228,13 @@ const popUpData = {
         },
         classNames: ["person-id"]
     },
+    "twittic247": {
+        tag: "img",
+        attributes: {
+            src: "./images/twittic247.gif",
+        },
+        classNames: ["person-id"]
+    },
     "author-gif": {
         tag: "img",
         attributes: {
