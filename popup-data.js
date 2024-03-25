@@ -165,7 +165,14 @@ const popUpData = {
         classNames: ["person-id"]
         
     },
-
+    "plantsnotpeople": {
+        tag: "img",
+        attributes: {
+            src: "./images/metaphor001.png",
+        },
+        classNames: ["person-id"]
+        
+    },
     "twogravity": {
         tag: "img",
         attributes: {
