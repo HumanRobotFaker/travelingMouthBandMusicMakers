@@ -173,6 +173,14 @@ const popUpData = {
         classNames: ["person-id"]
         
     },
+    "tickle": {
+        tag: "img",
+        attributes: {
+            src: "./images/tickle.png",
+        },
+        classNames: ["person-id"]
+        
+    },
     "ideasnotghosts": {
         tag: "img",
         attributes: {
