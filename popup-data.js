@@ -282,6 +282,16 @@ const popUpData = {
         classNames: ["person-id"]
         
     },
+    "iq-bellcurve": {
+        tag: "img",
+        attributes: {
+            src: "./images/IQ-BellCurve.png",
+        },
+        classNames: ["person-id"]
+        
+    },
+
+
     "yeshi-deathshrine": {
         tag: "img",
         attributes: {
