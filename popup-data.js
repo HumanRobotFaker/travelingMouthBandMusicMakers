@@ -173,6 +173,14 @@ const popUpData = {
         classNames: ["person-id"]
         
     },
+    "ideasnotghosts": {
+        tag: "img",
+        attributes: {
+            src: "./images/metaphor002.png",
+        },
+        classNames: ["person-id"]
+        
+    },
     "twogravity": {
         tag: "img",
         attributes: {
