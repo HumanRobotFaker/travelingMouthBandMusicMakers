@@ -266,7 +266,14 @@ const popUpData = {
         classNames: ["person-id"]
         
     },
-    
+    "LRE": {
+        tag: "img",
+        attributes: {
+            src: "./images/LRE.png",
+        },
+        classNames: ["person-id"]
+        
+    },
     "bouncing-ad": {
         tag: "img",
         attributes: {
