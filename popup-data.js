@@ -283,6 +283,14 @@ const popUpData = {
         classNames: ["person-id"]
         
     },
+    "icontact-ad": {
+        tag: "img",
+        attributes: {
+            src: "./images/ad-icontacts01.png",
+        },
+        classNames: ["person-id"]
+    },
+
     "yeshi-scene": {
         tag: "img",
         attributes: {
