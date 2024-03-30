@@ -1,0 +1,181 @@
+.hidden {
+    display: none;
+    
+}
+body {background-color: black;}
+
+.yellow-text {
+  color: yellow;
+}
+
+.emphasis {
+  color: grey;
+  font-family: 'American Typewriter', sans-serif;
+}
+
+.dialogue {
+  color: whitesmoke;
+  font-size: 22px;
+  font-family: 'Zapf Chancery';
+}
+
+p {
+    font-size: 24px;
+    color: white;
+    
+}
+
+li {
+  font-size: 18px;
+  color: white;
+  
+}
+ol {
+  font-size: 18px;
+  color: white;
+  
+}
+h1 {
+  font-size: 48px;
+  color: white;
+}
+th, td {
+  padding: 15px;
+  text-align: left;
+
+}
+
+h2 {
+  font-size: 40px;
+  color: white;
+}
+
+h3 {
+  font-size: 30px;
+  color: white;
+}
+
+a {
+    color: blue;
+  }
+
+  /* mouse over link */
+a:hover {
+    color: gray;
+    background-color: lightgreen;
+      }
+      a:link {
+        text-decoration: none;
+      }
+      
+      a:visited {
+        text-decoration: none;
+      }
+      
+      a:hover {
+        text-decoration: underline;
+      }
+      
+      a:active {
+        text-decoration: underline;
+      }
+
+.person-id {
+    width: 400px;
+    border: 2px outset black;
+    border-radius: 12px;
+}
+
+#popup {
+    position: fixed;
+    left: 20%;
+    top: 20%;
+    z-index: 100;
+    margin: auto;
+}
+
+.popup-inducer:hover {
+    color: rgb(222,181,90)
+}
+
+.showing {
+    display: block;
+}
+
+#text-wrapper {
+    width: 60%;
+    margin: auto;
+    padding: 10%;
+}
+
+#customers {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#customers td, #customers th {
+  border: 1px solid #ddd;
+   text-align: center;
+  padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+#customers tr:nth-child(odd){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  background-color: #04AA6D;
+  color: white;
+}
+.dialogue-box {
+  display: flex;
+  border: 1px solid whitesmoke;
+  margin-bottom: 20px;
+}
+
+.character-info {
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid whitesmoke;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.character-info .name {
+  margin-top: 10px;
+}
+
+.character-info img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 20%;
+  margin-bottom: 20px;
+}
+
+.dialogue {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  padding: 20px;
+}
+
+@media (max-width: 600px) {
+  .dialogue-box {
+    flex-direction: column;
+    border: 1px solid whitesmoke;
+  }
+  .character-info {
+    margin-bottom: 20px;
+  }
+}
+
+
+
+
