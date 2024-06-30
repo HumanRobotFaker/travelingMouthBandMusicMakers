@@ -86,7 +86,10 @@ mark {
 .papyrus { 
   font-family: 'Papyrus', 'fantasy'; 
 } 
-
+.papyrus-background {
+  background-image: url("https://tmbzine.netlify.app/images/papyrus-background.jpg:");
+  padding: 20px;
+}
 
 li {
 font-size: 18px;
