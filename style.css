@@ -22,8 +22,6 @@ p {
   
 }
 
-
-
 .markwhite {
   background-color: white;
   color: black;
@@ -84,6 +82,11 @@ mark {
   color: grey;
   font-family: 'American Typewriter', sans-serif;
 }
+
+.papyrus { 
+  font-family: 'Papyrus', 'fantasy'; 
+} 
+
 
 li {
 font-size: 18px;
