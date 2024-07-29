@@ -4,6 +4,11 @@
 }
 body {background-color: black;}
 
+.body2 {
+  background-color: rgb(32, 31, 31);
+
+}
+
 .yellow-text {
 color: yellow;
 }
@@ -22,10 +27,22 @@ p {
   
 }
 
+.p3 {
+  font-size: 30px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  color: pink;
+  
+}
+
 .markwhite {
   background-color: white;
   color: black;
 }
+.markwhite2 {
+  background-color: white;
+  color: white;
+}
+
 .markred {
   background-color: red;
   color: white;
@@ -82,7 +99,11 @@ mark {
   color: grey;
   font-family: 'American Typewriter', sans-serif;
 }
-
+.footnote {
+  color: grey;
+  font-family: 'American Typewriter', sans-serif;
+  font-size :small;
+}
 .papyrus { 
   font-family: 'Papyrus', 'fantasy'; 
 } 
@@ -120,6 +141,8 @@ h3 {
 font-size: 30px;
 color: grey;
 }
+
+
 
 a {
   color: grey;
@@ -171,6 +194,14 @@ a:hover {
 .censored {
   background-color: black;
   color: black;
+}
+
+.example22 {
+
+position: absolute;
+left: 25%;
+top: 15%;
+
 }
 
 #text-wrapper {
