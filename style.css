@@ -4,6 +4,71 @@ body {
     margin-right: 30%;
 }
 
+img {
+
+width: 600px;
+height: auto;
+padding: 20px;
+margin-left: 5%;
+border-radius: 35%;
+
+}
+
+.prime {
+width: 150px;
+height: auto;
+margin-top: 5px;
+border-radius: 0%;
+}
+
+.prime2 {
+    width: 350px;
+    height: auto;
+    margin-top: 5px;
+    border-radius: 0%;
+    }
+
+.nocurve {
+    width: 400px;
+    height: auto;
+    border-radius: 0%;
+    margin-top: -20px;
+    }
+
+.smaller {
+width: 30%;
+height: 25%;
+margin-top: -50px;
+}
+
+.slightlysmaller {
+    width: 60%;
+    height: auto;
+    margin-top: 5px;
+    margin-left:20%;
+    border-radius: 35%;
+    }
+    
+
+.image-name {
+    position: relative;
+  }
+  
+.named {
+    position: absolute;
+    top: 70%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+    font-size: 28px;
+    color: black;
+    background-color: yellow;
+    border-color: white;
+    border-width: 3px;
+    border-style: solid;
+    border-color: black;
+    padding: 5px;
+  }
+
 h1 {
     color: white;
     font-size: 45px;
@@ -13,14 +78,32 @@ h1 {
 h2 {
     color: white;
     font-size: 45px;
+    margin-bottom: 1%;
 }
 
 p {
     color: whitesmoke;
     font-family: 'Courier New', monospace;
     font-size: 20px;
-    padding: 10px;
+    padding: 8px;
     text-align: justify;
+}
+
+.newfont
+{
+    color: whitesmoke;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    padding: 8px;
+    text-align: justify;
+}
+
+
+.coin {
+  position: relative; 
+  top: 0.2ex; 
+  
+
 }
 
 .action {
@@ -45,8 +128,26 @@ ul li {
     text-align: justify;
 }
 
+.censored {
+    color: black;
+    background-color: black;
+    font-weight: bolder;
+    font-style: italic;
+
+}
+
+.radio {
+
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: #778aa8;
+    font-size: 16px;
+    font-style: italic;
+    padding: 8px;
+    text-align: justify;
+}
+
 .red {
-    color: whitesmoke;
+    color: white;
     background-color: red;
     font-weight: bolder;
     font-style: italic;
@@ -68,10 +169,112 @@ ul li {
 
 }
 
+.green {
+    color: black;
+    background-color: green;
+    font-weight: bolder;
+    font-style: italic;
+    letter-spacing: 0.09em;
+}
+
+.greenstart {
+    color: green;
+    background-color: green;
+    font-weight: bolder;
+    font-style: italic;
+}
+.greenend {
+    color: green;
+    background-color: green;
+    font-weight: bolder;
+    font-style: italic;
+}
+
 .skyblue {
     color: skyblue;
 
 }
+
+.blue {
+    color: white;
+    background-color: blue;
+    font-weight: bolder;
+    font-style: italic;
+    letter-spacing: 0.09em;
+}
+.bluestart {
+    color: blue;
+    background-color: blue;
+    font-weight: bolder;
+    font-style: italic;
+}
+.blueend {
+    color: blue;
+    background-color: blue;
+    font-weight: bolder;
+    font-style: italic;
+}
+
+.indigo {
+    color: white;
+    background-color: indigo;
+    font-weight: bolder;
+    font-style: italic;
+    letter-spacing: 0.09em;
+}
+.indigostart {
+    color: indigo;
+    background-color: indigo;
+    font-weight: bolder;
+    font-style: italic;
+}
+.indigoend {
+    color: indigo;
+    background-color: indigo;
+    font-weight: bolder;
+    font-style: italic;
+}
+
+.violet {
+    color: black;
+    background-color: violet;
+    font-weight: bolder;
+    font-style: italic;
+    letter-spacing: 0.09em;
+}
+.violetstart {
+    color: violet;
+    background-color: violet;
+    font-weight: bolder;
+    font-style: italic;
+}
+.violetend {
+    color: violet;
+    background-color: violet;
+    font-weight: bolder;
+    font-style: italic;
+}
+
+.grey {
+    color: black;
+    background-color: grey;
+    font-weight: bolder;
+    font-style: italic;
+    letter-spacing: 0.09em;
+}
+.greystart {
+    color: grey;
+    background-color: grey;
+    font-weight: bolder;
+    font-style: italic;
+}
+.greyend {
+    color: grey;
+    background-color: grey;
+    font-weight: bolder;
+    font-style: italic;
+}
+
 .white-emphasis{
     color: white;
     font-size: 12px;
@@ -125,3 +328,41 @@ ul li {
     text-align: justify;
 
   }
+
+ 
+a.nextchapter:hover
+{
+    background-color: #3366FF; 
+    color: whitesmoke;
+    font-family: 'Courier New', monospace;
+    font-size: 40px;
+    padding: 8px;
+    text-align: justify;
+
+}
+
+a.nextchapter
+{
+    color: whitesmoke;
+    font-family: 'Courier New', monospace;
+    text-decoration: none;
+    font-size: 40px;
+    margin-left: 30%;
+    padding: 8px;
+    text-align: justify;
+
+}
+
+#movingImage {
+    position: relative;
+    left: -1000;
+    top: 10%;
+    transform: translateY(-25%);
+    animation: moveRight 10s infinite linear;
+}
+
+@keyframes moveRight {
+    100% {
+        left: 150%;
+    }
+}

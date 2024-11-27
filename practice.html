@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Moving Image</title>
+    <style>
+        #movingImage {
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            animation: moveRight 10s infinite linear;
+        }
+
+        @keyframes moveRight {
+            100% {
+                left: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <img id="movingImage" src="images/pontiac001.png" alt="Moving Image">
+</body>
+</html>
