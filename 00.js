@@ -5,8 +5,13 @@ const IDimages = {
 
     hector: "images/ID-Hector.png",
     uriah: "images/ID-Uriah.png",
-    al: "images/ID-Luna.png",
+    al: "images/ID-Huffman.png",
     xiander: "images/ID-Xiander.png",
+    britni: "images/ID-Britni.png",
+    luuk: "images/ID-Luuk.png",
+    andrew: "images/ID-Andrew.png",
+    winfield: "images/ID-Winfield.png",
+
 
 }
 

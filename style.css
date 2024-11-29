@@ -17,7 +17,9 @@ border-radius: 35%;
 .IDimage {
 
     border-radius: 10%;
-
+    width: 400px;
+height: auto;
+margin-left: 55%;
 }
 
 .hidden {
