@@ -1,0 +1,70 @@
+body {
+    background-color: black;
+    margin-left: 20%;
+    margin-right: 30%;
+}
+
+img {
+
+    height:auto;
+    width: 100%;
+
+}
+
+.hidden {
+
+display: none;
+
+}
+
+ /* BUTTON MANIA */
+ /* button #1 */
+
+ .space-western-button {  
+    background-color: rgba(150, 75, 0, 0.8);  
+    color: #fff;  
+    border: 2px solid transparent;  
+    border-radius: 8px;  
+    padding: 10px 20px;  
+    font-size: 16px;  
+    cursor: pointer;  
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);  
+    transition: transform 0.2s ease;  
+    animation: glow 1s infinite;  
+  }  
+    
+  .space-western-button:hover {  
+    transform: scale(1.05);  
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6);  
+  }  
+    
+  .space-western-button:active {  
+    transform: scale(0.95);  
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);  
+  }  
+    
+  @keyframes glow {  
+    0% {  
+      border-color: #ff0000;  
+    }  
+    16% {  
+      border-color: #ff7f00;  
+    }  
+    32% {  
+      border-color: #ffff00;  
+    }  
+    48% {  
+      border-color: #00ff00;  
+    }  
+    64% {  
+      border-color: #00ffff;  
+    }  
+    80% {  
+      border-color: #0000ff;  
+    }  
+    100% {  
+      border-color: #ff00ff;  
+    }  
+  }
+
+  /* end button 1  */
