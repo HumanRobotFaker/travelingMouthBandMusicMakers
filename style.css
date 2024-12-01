@@ -46,6 +46,14 @@ margin-top: 5px;
 border-radius: 0%;
 }
 
+.prime1 {
+    width: 100%;
+    height: auto;
+    margin-left: -15px;
+    margin-top: 0px;
+    border-radius: 0%;
+    }
+
 .prime2 {
     width: 350px;
     height: auto;
@@ -154,6 +162,7 @@ ul li {
 }
 
 .censored {
+
     color: black;
     background-color: black;
     font-weight: bolder;
@@ -171,6 +180,19 @@ ul li {
     text-align: justify;
 }
 
+.redstart {
+    color: red;
+    background-color: red;
+    font-weight: bolder;
+    font-style: italic;
+}
+.redend {
+    color: red;
+    background-color: red;
+    font-weight: bolder;
+    font-style: italic;
+}
+
 .red {
     color: white;
     background-color: red;
@@ -186,6 +208,18 @@ ul li {
     font-style: italic;
 
 }
+.orangestart {
+    color: orange;
+    background-color: orange;
+    font-weight: bolder;
+    font-style: italic;
+}
+.orangeend {
+    color: orange;
+    background-color: orange;
+    font-weight: bolder;
+    font-style: italic;
+}
 .yellow {
     color: black;
     background-color: yellow;
@@ -193,7 +227,18 @@ ul li {
     font-style: italic;
 
 }
-
+.yellowstart {
+    color: yellow;
+    background-color: yellow;
+    font-weight: bolder;
+    font-style: italic;
+}
+.yellowend {
+    color: yellow;
+    background-color: yellow;
+    font-weight: bolder;
+    font-style: italic;
+}
 .green {
     color: black;
     background-color: green;

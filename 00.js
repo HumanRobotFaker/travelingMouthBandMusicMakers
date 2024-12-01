@@ -11,6 +11,7 @@ const IDimages = {
     luuk: "images/ID-Luuk.png",
     andrew: "images/ID-Andrew.png",
     winfield: "images/ID-Winfield.png",
+    khali: "images/ID-Khali.png",
 
 
 }
