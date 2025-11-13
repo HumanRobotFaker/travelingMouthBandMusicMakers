@@ -1,0 +1,350 @@
+body {
+
+    background: black;
+    margin-top: 10%;
+    margin-left: 25%;
+    margin-right: 35%;
+    margin-bottom: 10%;
+}
+
+.name {
+
+    color: pink;
+
+}
+
+button {
+  background-color: greenyellow;
+  border: none;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  margin-left: 40%;
+  margin-right: 40%;
+ 
+}
+
+button:hover {
+     background-color: red;
+     color: white;
+}
+
+
+img {
+
+    margin-left: 15%;
+    border-radius: 10%;
+}
+
+.tilted {
+
+    transform: rotate(45deg);
+    margin-top: -5%;
+    margin-bottom: -5%;
+    height: 50%;
+    width: auto;
+
+}
+
+.smaller {
+
+    height: 25%;
+    width: auto;
+
+}
+
+.nostyle {
+
+    border-style: none;
+
+}
+
+.marginleftpic {
+
+    height: 73%;
+    width: auto;
+   margin-left: -40%;
+   margin-bottom: -110%;
+
+}
+
+.marginrightpic {
+
+    height: 73%;
+    width: auto;
+   margin-left: 95%;
+   margin-top: -40%;
+  margin-bottom: -110%;
+
+}
+
+.backgroundPic {
+
+    height: 173%;
+    width: auto;
+    margin-left: -30%;
+   margin-right: 95%;
+
+}
+
+.redbutton {
+
+    background-color: blueviolet;
+    color: white;
+
+}
+
+.redbutton2 {
+
+    background-color: blueviolet;
+    color: white;
+    width: 200px
+
+}
+
+.overlay1 {
+
+    height: 50%;
+    width: auto;
+    margin-left: -41%;
+
+}
+.overlay2 {
+
+    height: 40%;
+    width: auto;
+    margin-left: -20%;
+
+}
+.overlay3 {
+
+    height: 43%;
+    width: auto;
+    margin-left: -10%;
+    margin-bottom: -3%;
+
+}
+
+.overlay4 {
+
+    height: 73%;
+    width: auto;
+    margin-left: 60%;
+    margin-top: -95%;
+    margin-bottom: -3%;
+
+}
+
+h1 {
+    color: turquoise;
+    font-size: 200px;
+    margin-left: 20%;
+    margin-bottom: -4%;
+}
+
+
+.p2 { color: grey;
+    font-size: 20px;
+}
+p {
+    color: turquoise;
+    font-size: larger;
+    font-family: sans-serif:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.rightward {
+
+
+    font-size: 28px;
+     color: whitesmoke;
+    font-family: sans-serif:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+}
+
+.whitetext {
+
+    color: whitesmoke;
+    font-family: sans-serif:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+}
+.greytext {
+
+    color: grey;
+    font-family: sans-serif:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+}
+.pinktext {
+
+    color: pink;
+    font-weight: lighter;
+    font-family: sans-serif:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+}
+.paleGreenText {
+
+    color: palegreen;
+    font-weight: lighter;
+    font-family: sans-serif:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+}
+
+.define-word {
+  /* Makes the word clickable/hoverable and easy to select */
+  cursor: help;
+  /* Required for the popup to be positioned relative to this word */
+  position: relative;
+  /* Optional: Adds an underline to signal interactivity */
+  background-color: black;
+  color: red;
+}
+
+/* The actual popup box */
+.define-word::after {
+  content: attr(data-definition); /* Get content from the HTML attribute */
+  
+  /* Positioning and Style */
+  position: absolute;
+  left: 40;
+  top: 50%; /* Position right below the word */
+  
+  /* Appearance */
+  background-color: #333;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 4px;
+  width: 200px;
+  z-index: 10;
+  
+  /* Hiding the box by default */
+  visibility: hidden;
+  opacity: 0.5;
+  transition: opacity 0.3s, visibility 0.3s;
+}
+
+/* Show the box on hover */
+.define-word:hover::after {
+  visibility: visible;
+  opacity: 0.8;
+}
+
+a img.hover {
+    display: none;
+    width: 50%;
+    height: auto;
+    margin-right: 20%;
+    margin-left: 20%;
+}
+a img.default {
+    display: inherit;
+    width: 50%;
+    height: auto;
+    margin-right: 20%;
+    margin-left: 20%;
+}
+a:hover img.hover {
+    display: inherit;
+    width: 50%;
+    height: auto;
+    margin-right: 20%;
+    margin-left: 20%;
+}
+a:hover img.default {
+    display: none;
+    width: 50%;
+    height: auto;
+    margin-right: 20%;
+    margin-left: 20%;
+}
+
+
+
+.dialogue {
+
+    font-size: 25px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: white;
+    background-color: black;
+    border-style: solid;
+    border-color: red;
+    padding: 10%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+
+
+}
+
+
+.container {
+  position: relative;
+}
+
+.overlayart1 {
+
+    height: 25%;
+    width: auto;
+  position: absolute;
+  top: 258px;
+  left: 15px;
+}
+
+.overlayart2 {
+
+    height: 30%;
+    width: auto;
+  position: absolute;
+  top: 258px;
+  left: -40%;
+
+}
+
+.overlayart3 {
+
+    height: 30%;
+    width: auto;
+  position: absolute;
+  top: 258px;
+  left: 50%;
+
+}
+
+.overlayPerson1 {
+
+    height: 70%;
+    width: auto;
+  position: absolute;
+  top: 288px;
+  left: 60%;
+
+}
+
+.overlayPerson2 {
+
+    height: 80%;
+    width: auto;
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+
+}
+
+.textmessageLeft {
+    color: skyblue;
+    font-size: larger;
+    font-family: sans-serif:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    float: left;
+    margin-right: 50%;
+}
+
+.textmessageRight {
+    color: pink;
+    font-size: larger;
+    font-family: sans-serif:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    float: right;
+    margin-left: 50%;
+
+}

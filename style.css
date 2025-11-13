@@ -493,3 +493,56 @@ a.nextchapter
   }
 
   /* end button 1  */
+
+  .sci-fi-button {  
+    background-color: #1a1a1a;  
+    color: #00ffcc;  
+    border: none;  
+    border-radius: 10px;  
+    padding: 15px 30px;  
+    font-size: 20px;  
+    font-family: 'Orbitron', sans-serif;  
+    box-shadow: 0 10px 30px rgba(0, 255, 204, 0.5);  
+    cursor: pointer;  
+    transition: all 0.3s ease;  
+    position: relative;  
+    overflow: hidden;  
+  }
+  
+  .sci-fi-button::before {  
+    content: '';  
+    position: absolute;  
+    top: 50%;  
+    left: 50%;  
+    width: 300%;  
+    height: 300%;  
+    background: radial-gradient(circle, rgba(0, 255, 204, 0.2) 20%, transparent 40%);  
+    border-radius: 50%;  
+    transform: translate(-50%, -50%) scale(0);  
+    transition: transform 0.5s;  
+    z-index: 0;  
+  }
+  
+  .sci-fi-button:hover::before {  
+    transform: translate(-50%, -50%) scale(1);  
+  }
+  
+  .sci-fi-button:hover {  
+    box-shadow: 0 20px 40px rgba(0, 255, 204, 0.6);  
+  }
+  
+  .sci-fi-button:active {  
+    transform: translateY(2px);  
+    box-shadow: 0 5px 20px rgba(0, 255, 204, 0.4);  
+  }
+  
+  @keyframes float {  
+    0% { transform: translateY(0); }  
+    50% { transform: translateY(-10px); }  
+    100% { transform: translateY(0); }  
+  }
+  
+  .sci-fi-button {  
+    animation: float 3s ease-in-out infinite;  
+    z-index: 1;  
+  }
