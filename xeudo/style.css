@@ -109,25 +109,29 @@ img {
 
 .overlay1 {
 
-    height: 50%;
-    width: auto;
-    margin-left: -41%;
+height: 110%;
+width: auto;
+    position: absolute;
+bottom: -10px;
+  left: 35px;
 
 }
 .overlay2 {
 
-    height: 40%;
-    width: auto;
-    margin-left: -20%;
+height: 90%;
+width: auto;
+    position: absolute;
+bottom: -10px;
+  left: 85px;
 
 }
 .overlay3 {
 
-    height: 43%;
-    width: auto;
-    margin-left: -10%;
-    margin-bottom: -3%;
-
+ height: 90%;
+width: auto;
+    position: absolute;
+bottom: -20px;
+  left: 145px;
 }
 
 .overlay4 {
