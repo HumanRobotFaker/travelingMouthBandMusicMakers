@@ -85,10 +85,10 @@ img {
 
 .backgroundPic {
 
-    height: 173%;
-    width: auto;
-    margin-left: -30%;
-   margin-right: 95%;
+    height: auto;
+    width: 150%;
+    margin-left: -200px;
+   margin-right: 0px;
 
 }
 
@@ -292,8 +292,8 @@ a:hover img.default {
     height: 25%;
     width: auto;
   position: absolute;
-  top: 258px;
-  left: 15px;
+  top: 208px;
+  left: -200px;
 }
 
 .overlayart2 {
@@ -301,8 +301,8 @@ a:hover img.default {
     height: 30%;
     width: auto;
   position: absolute;
-  top: 258px;
-  left: -40%;
+  top: 199px;
+  left: 50px;
 
 }
 
@@ -311,8 +311,8 @@ a:hover img.default {
     height: 30%;
     width: auto;
   position: absolute;
-  top: 258px;
-  left: 50%;
+  top: 208px;
+  left: 350px;
 
 }
 
@@ -321,8 +321,8 @@ a:hover img.default {
     height: 70%;
     width: auto;
   position: absolute;
-  top: 288px;
-  left: 60%;
+  top: 250px;
+  left: 200px;
 
 }
 
